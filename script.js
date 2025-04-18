@@ -51,8 +51,21 @@ const questions = [
             part3: "24 20 40"
         },
         options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
-        correctAnswer: "e", // Asumsi jawaban benar adalah 'e' 
+        correctAnswer: "e", //  
         explanation: "20 seharsunya 16 karena pola nya dikurang 4 ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "-3 1 5",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [9, 13, 15, 21, 25],
+            part3: "29 33 37"
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "c", // 
+        explanation: "15 seharsunya 17 karena pola nya ditambah 4 ",
         category: "TKD" // Atau kategori spesifik "Pola Deret"
     },
     // Tambahkan soal-soal RBB Anda di sini...
