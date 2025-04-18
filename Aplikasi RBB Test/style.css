@@ -1,0 +1,454 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif; /* Gunakan font Poppins */
+    line-height: 1.6;
+    background: linear-gradient(135deg, #ece9e6 0%, #ffffff 100%); /* Gradient abu-abu muda ke putih */
+    color: #333; /* Warna teks default lebih gelap */
+    margin: 0; /* Hapus margin default */
+    padding: 20px; /* Beri padding pada body */
+    min-height: 100vh; /* Pastikan background memenuhi layar */
+    /* display: flex; /* Untuk memusatkan container */
+    /* justify-content: center;*/
+    /* align-items: center;*/
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3; /* Warna biru yang lebih dalam untuk judul */
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sedikit bayangan teks */
+    margin-top: 20px;
+    text-transform: uppercase;
+    ont-weight: bold;  
+    font-size: 2.8em;  
+    /* letter-spacing: 1.5px; */
+}
+
+#quiz-container {
+    max-width: 750px; /* Sedikit lebih lebar */
+    width: 90%; /* Responsif */
+    margin: 40px auto;
+    padding: 30px 40px; /* Padding lebih besar */
+    background-color: #fff; /* Kontainer tetap putih */
+    border: none; /* Hapus border lama */
+    border-radius: 15px; /* Sudut lebih tumpul */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Shadow lebih jelas */
+}
+
+#question-area {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Garis pemisah halus */
+}
+
+#question-number {
+    font-weight: 600; /* Sedikit lebih tebal */
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+#timer-info {
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #555;
+    text-align: right; /* Posisikan di kanan area pertanyaan */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end; /* Rata kanan */
+    align-items: center; /* Pusatkan item secara vertikal */
+}
+
+#timer {
+    display: inline-block; /* Agar bisa diberi style */
+    min-width: 45px; /* Lebar minimum agar angka tidak loncat-loncat */
+    padding: 6px 12px;
+    margin-left: 8px;      /* Jarak dari teks "Sisa Waktu:" */
+    background: linear-gradient(145deg, #e0f7ff, #b3e5fc); /* Gradient biru muda */
+    border-radius: 25px;
+    color: #01579b; /* Warna biru untuk waktu */
+    font-weight: bold;
+    ont-size: 1.1em;      /* Ukuran font sedikit lebih besar */
+    text-align: center;    /* Pastikan teks angka terpusat */
+    box-shadow: inset 1px 1px 3px rgba(0, 81, 139, 0.2), /* Inner shadow halus */
+                1px 1px 3px rgba(255, 255, 255, 0.7); /* Efek highlight halus */
+    /* vertical-align: middle; < -- Bisa dihapus jika menggunakan flex di parent */
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Transisi halus */
+}
+
+/* Style untuk waktu kritis (misal: 5 detik terakhir) */
+#timer.critical {
+    background: linear-gradient(145deg, #ffcdd2, #ef9a9a); /* Gradient merah muda */
+    color: #b71c1c; /* Warna teks merah tua */
+    animation: pulse 0.8s infinite; /* Animasi denyut sedikit lebih cepat */
+}
+
+/* Animasi denyut */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+#question-text {
+    font-size: 1.2em; /* Ukuran font pertanyaan lebih besar */
+    font-weight: 600; /* Pertanyaan lebih tebal */
+    color: #222; /* Warna teks pertanyaan lebih gelap */
+}
+
+#options-area {
+    display: grid; /* Gunakan grid untuk layout tombol (opsional) */
+    gap: 12px; /* Jarak antar tombol */
+}
+
+.option-button {
+    display: block;
+    width: 100%;
+    padding: 12px 18px; /* Padding lebih nyaman */
+    margin-bottom: 0; /* Hapus margin bawah karena sudah ada gap */
+    text-align: left;
+    background-color: #f8f9fa; /* Warna dasar tombol lebih cerah */
+    border: 1px solid #dee2e6; /* Border lebih halus */
+    border-radius: 8px; /* Sudut tombol */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 400;
+    color: #333;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease; /* Transisi halus */
+}
+
+/* Efek hover yang lebih seru */
+.option-button:hover:not(:disabled) {
+    background-color: #e9ecef;
+    transform: translateY(-2px); /* Sedikit naik saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow saat hover */
+}
+
+/* Styling untuk jawaban benar */
+.option-button.correct {
+    background-color: #d1e7dd; /* Hijau pastel */
+    border-color: #a3cfbb;
+    color: #0f5132; /* Warna teks hijau tua */
+    font-weight: 600;
+}
+
+/* Styling untuk jawaban salah yang dipilih user */
+.option-button.incorrect {
+    background-color: #f8d7da; /* Merah muda pastel */
+    border-color: #f1aeae;
+    color: #842029; /* Warna teks merah tua */
+    font-weight: 600;
+}
+
+/* Styling untuk tombol yang dinonaktifkan setelah memilih */
+.option-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+/* Pastikan jawaban benar tetap terlihat jelas meski salah pilih */
+.option-button.correct:disabled {
+    opacity: 1; /* Kembalikan opacity jika itu jawaban yg benar*/
+}
+
+
+#next-button {
+    display: block; /* Pastikan tombol block */
+    width: auto; /* Lebar otomatis sesuai teks */
+    min-width: 150px; /* Lebar minimum */
+    padding: 12px 30px; /* Padding lebih besar */
+    background: linear-gradient(90deg, #007bff 0%, #0056b3 100%); /* Gradient biru */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Tombol lebih bulat */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 30px auto 0; /* Pusatkan tombol next */
+    transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+#next-button:hover:not(:disabled) {
+    background: linear-gradient(90deg, #0056b3 0%, #003f8a 100%); /* Gradient lebih gelap saat hover */
+    transform: scale(1.03); /* Sedikit membesar */
+    box-shadow: 0 5px 15px rgba(0, 91, 179, 0.4); /* Shadow biru */
+}
+
+#next-button:disabled {
+    background: #adb5bd; /* Warna abu-abu saat nonaktif */
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+#result-area {
+    margin-top: 25px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center; /* Tengahkan teks hasil */
+}
+
+/* Warna background spesifik untuk hasil */
+#result-area.correct {
+     background-color: #d1e7dd; /* Hijau pastel */
+     border: 1px solid #a3cfbb;
+     color: #0f5132; /* Hijau tua */
+}
+
+#result-area.incorrect {
+    background-color: #f8d7da; /* Merah muda pastel */
+    border: 1px solid #f1aeae;
+    color: #842029; /* Merah tua */
+}
+
+#explanation {
+    margin-top: 15px;
+    font-style: normal; /* Normal saja */
+    font-size: 0.95em;
+    color: #444; /* Warna penjelasan sedikit lebih terang */
+    background-color: #f8f9fa; /* Background halus untuk penjelasan */
+    padding: 10px 15px;
+    border-radius: 5px;
+    border-left: 4px solid #007bff; /* Aksen garis biru di kiri */
+}
+
+#score-area {
+    margin-top: 35px;
+    font-weight: 600; /* Lebih tebal */
+    font-size: 1.1em; /* Sedikit lebih besar */
+    text-align: center; /* Skor di tengah */
+    color: #0056b3; /* Warna biru */
+}
+
+/* Letakkan ini di mana saja dalam file CSS Anda */
+
+#category-selection {
+    max-width: 750px; /* Samakan dengan quiz-container */
+    width: 90%;
+    margin: 40px auto; /* Atur margin seperti quiz-container */
+    padding: 30px 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center; /* Pusatkan konten di dalamnya */
+}
+
+#category-selection h2 {
+    color: #0056b3;
+    margin-bottom: 25px;
+}
+
+.category-button {
+    display: block; /* Tombol memenuhi lebar */
+    width: 80%;     /* Tidak terlalu lebar */
+    margin: 15px auto; /* Jarak antar tombol dan pusatkan */
+    padding: 15px 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(90deg, #1e90ff 0%, #007bff 100%); /* Gradient biru lain */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.category-button:hover {
+    background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 91, 179, 0.3);
+}
+
+/* Samakan styling #quiz-container */
+#quiz-container {
+    /* Pastikan properti di bawah ini masih ada jika sebelumnya sudah dimodif */
+    max-width: 750px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    /* display: none; <--- Akan dikontrol oleh JS, hapus dari sini jika ada */
+}
+
+/* Letakkan ini di mana saja, misalnya setelah #next-button */
+
+#back-button {
+    display: none; /* Default tersembunyi */
+    width: auto;
+    min-width: 200px; /* Lebar minimum agar teks muat */
+    padding: 12px 30px;
+    /* Bisa pakai warna lain, misal hijau atau abu */
+    background: linear-gradient(90deg, #6c757d 0%, #5a6268 100%); /* Contoh gradient abu-abu */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 30px auto 10px; /* Margin atas, auto kiri/kanan, bawah */
+    transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+#back-button:hover {
+    background: linear-gradient(90deg, #5a6268 0%, #495057 100%); /* Lebih gelap saat hover */
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Letakkan ini di mana saja dalam file CSS */
+
+#sequence-display {
+    display: flex; /* Menggunakan Flexbox untuk menata bagian deret */
+    justify-content: center; /* Pusatkan bagian deret */
+    align-items: center; /* Sejajarkan item secara vertikal */
+    flex-wrap: wrap; /* Biarkan item pindah baris jika layar sempit */
+    margin-bottom: 20px; /* Jarak ke teks pertanyaan */
+    padding: 15px 10px;
+    background-color: #f8f9fa; /* Latar belakang lembut */
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    font-family: 'Consolas', 'Courier New', Courier, monospace; /* Font monospace agar lebih rapi */
+    font-size: 1.1em; /* Ukuran font sedikit lebih besar */
+}
+
+.sequence-part {
+    margin: 5px 10px; /* Jarak antar bagian */
+    letter-spacing: 3px; /* Jarak antar angka/huruf dalam satu bagian */
+    white-space: nowrap; /* Jaga agar angka tidak terpisah */
+}
+
+.sequence-separator {
+    font-weight: bold;
+    color: #adb5bd; /* Warna pemisah */
+    margin: 5px 5px;
+    font-size: 1.2em;
+}
+
+.letter-group {
+    display: flex; /* Tata huruf secara horizontal */
+    gap: 15px; /* Jarak antar pasangan huruf-angka */
+}
+
+.letter-number-pair {
+    display: flex;
+    flex-direction: column; /* Huruf di atas, angka di bawah */
+    align-items: center; /* Pusatkan huruf dan angka */
+    min-width: 25px; /* Lebar minimum */
+}
+
+.letter-number-pair .letter {
+    font-weight: bold;
+    color: #0056b3; /* Warna huruf */
+    line-height: 1;
+}
+
+.letter-number-pair .number {
+    font-size: 0.9em;
+    color: #6c757d; /* Warna angka asosiasi */
+    line-height: 1;
+    margin-top: 3px; /* Jarak antara huruf dan angka */
+}
+
+/* Sesuaikan padding pada question-text jika perlu */
+#question-text {
+    margin-top: 15px; /* Beri jarak dari sequence display */
+    /* Mungkin perlu padding atas/bawah agar tidak terlalu dekat */
+}
+
+/* Styling untuk kontainer opsi berlabel (khusus tipe soal sequence) */
+.option-container.labeled-option {
+    display: flex;         /* Gunakan flexbox untuk tata letak */
+    align-items: center;   /* Sejajarkan item secara vertikal */
+    padding: 10px 15px;    /* Padding internal */
+    margin-bottom: 10px;   /* Jarak antar opsi */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.option-container.labeled-option:hover {
+    background-color: #e9ecef;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.option-label {
+    min-width: 70px; /* Beri ruang untuk "Option A", "Option B", dll. */
+    font-size: 0.9em;
+    color: #6c757d; /* Warna abu-abu untuk label */
+    font-weight: 600;
+    margin-right: 15px; /* Jarak ke kotak visual */
+}
+
+.option-checkbox-visual {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #adb5bd; /* Border abu-abu */
+    border-radius: 4px;      /* Sedikit bulat */
+    margin-right: 15px;      /* Jarak ke nilai opsi (huruf) */
+    background-color: #fff; /* Latar belakang putih */
+    flex-shrink: 0; /* Jangan biarkan kotak ini menyusut */
+}
+
+.option-value {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Styling saat opsi berlabel dipilih (benar/salah) */
+.option-container.labeled-option.correct {
+    background-color: #d1e7dd;
+    border-color: #a3cfbb;
+}
+/* Tanda visual untuk pilihan benar (misal, ubah background kotak) */
+.option-container.labeled-option.correct .option-checkbox-visual {
+    background-color: #5cb85c; /* Hijau */
+    border-color: #4cae4c;
+}
+/* Tanda visual untuk pilihan benar meski user salah pilih */
+.option-container.labeled-option.correct:disabled .option-checkbox-visual {
+     opacity: 1; /* Tetap jelas */
+     background-color: #5cb85c;
+     border-color: #4cae4c;
+}
+
+
+.option-container.labeled-option.incorrect {
+    background-color: #f8d7da;
+    border-color: #f1aeae;
+}
+/* Tanda visual untuk pilihan salah yang dipilih user */
+.option-container.labeled-option.incorrect .option-checkbox-visual {
+    background-color: #d9534f; /* Merah */
+    border-color: #d43f3a;
+}
+
+/* Styling saat opsi dinonaktifkan */
+.option-container.labeled-option:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.option-container.labeled-option.correct:disabled {
+    opacity: 1; /* Pastikan yang benar tetap jelas */
+}
+
+/* Tambahkan ini ke style.css */
+.option-container.labeled-option.disabled,
+.option-button.disabled { /* Target kedua tipe */
+    pointer-events: none; /* Membuat elemen tidak bisa diklik */
+    opacity: 0.7;         /* Membuatnya terlihat pudar */
+    cursor: not-allowed;
+}
+
+/* Override opacity untuk jawaban benar yang dinonaktifkan agar tetap jelas */
+.option-container.labeled-option.correct.disabled,
+.option-button.correct.disabled {
+     opacity: 1;
+}
