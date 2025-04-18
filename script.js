@@ -6,28 +6,28 @@ const questions = [
         options: ["Surabaya", "Jakarta", "Bandung", "Medan"],
         correctAnswer: "Jakarta",
         explanation: "Jakarta adalah ibu kota negara Republik Indonesia.",
-        category: "TWK" // <-- TAMBAHKAN KATEGORI
+        category: "TWK" 
     },
     {
         question: "Sila ke-3 Pancasila berbunyi...",
         options: ["Ketuhanan Yang Maha Esa", "Kemanusiaan yang Adil dan Beradab", "Persatuan Indonesia", "Keadilan Sosial"],
         correctAnswer: "Persatuan Indonesia",
         explanation: "Bunyi sila ketiga adalah Persatuan Indonesia, dilambangkan pohon beringin.",
-        category: "TWK" // <-- TAMBAHKAN KATEGORI
+        category: "TWK" 
     },
     {
         question: "2 + 2 * 3 = ...",
         options: ["10", "8", "12", "6"],
         correctAnswer: "8",
         explanation: "Perkalian dikerjakan lebih dulu: 2 * 3 = 6, kemudian 2 + 6 = 8.",
-        category: "TKD" // <-- TAMBAHKAN KATEGORI
+        category: "TKD" 
     },
     {
         question: "Antonim dari kata 'Besar' adalah...",
         options: ["Luas", "Lebar", "Kecil", "Tinggi"],
         correctAnswer: "Kecil",
         explanation: "Antonim adalah lawan kata. Lawan kata dari besar adalah kecil.",
-        category: "TKD" // <-- TAMBAHKAN KATEGORI
+        category: "TKD" 
     },
     {
         question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
@@ -38,8 +38,21 @@ const questions = [
             part3: "84 89 85"
         },
         options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
-        correctAnswer: "c", // Asumsi jawaban benar adalah 'e' (mungkin karena 23 prima?)
-        explanation: "Pola yang mungkin adalah keterkaitan nilai huruf dengan deret di sampingnya, atau sifat angka yang diasosiasikan (misal: ganjil/genap, prima/komposit). Dalam contoh ini, 23 (e) adalah bilangan prima yang paling menonjol atau bisa jadi ada pola lain terkait deret 514 dan 848985.",
+        correctAnswer: "e", // 
+        explanation: "23 seharusnya 21 karena pola nya dikurang 4",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "9 5 10",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [6, 12, 8, 16, 20],
+            part3: "24 20 40"
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "e", // Asumsi jawaban benar adalah 'e' 
+        explanation: "20 seharsunya 16 karena pola nya dikurang 4 ",
         category: "TKD" // Atau kategori spesifik "Pola Deret"
     },
     // Tambahkan soal-soal RBB Anda di sini...
