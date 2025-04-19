@@ -68,6 +68,19 @@ const questions = [
         explanation: "15 seharsunya 17 karena pola nya ditambah 4 ",
         category: "TKD" // Atau kategori spesifik "Pola Deret"
     },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "25 24 27",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [22, 29, 20, 31, 17],
+            part3: "33 16 35"
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "e", // 
+        explanation: "17 seharsunya 18 karena pola nya dikurang 2 (2 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
     // Tambahkan soal-soal RBB Anda di sini...
     // Contoh soal AKHLAK:
     // {

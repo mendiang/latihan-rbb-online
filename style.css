@@ -452,3 +452,110 @@ h1 {
 .option-button.correct.disabled {
      opacity: 1;
 }
+
+/* --- Responsive Styles for Smaller Screens --- */
+/* Terapkan gaya ini jika lebar layar 700px atau kurang */
+@media (max-width: 700px) {
+
+    /* --- Penyesuaian Umum --- */
+    body {
+        padding: 10px; /* Kurangi padding body */
+    }
+
+    h1 {
+        font-size: 2em; /* Kecilkan sedikit judul utama */
+        margin-bottom: 25px;
+    }
+
+    #quiz-container,
+    #category-selection {
+        padding: 20px 15px; /* Kurangi padding horizontal kontainer */
+        margin: 20px auto; /* Kurangi margin atas/bawah */
+    }
+
+    /* --- Penyesuaian Spesifik untuk Sequence Display --- */
+    #sequence-display {
+        padding: 10px 5px;  /* Kurangi padding internal sequence */
+        font-size: 1em;     /* Kecilkan sedikit font dasar sequence */
+        /* Pastikan flex-wrap masih ada jika diperlukan */
+        flex-wrap: wrap;
+        justify-content: center; /* Pastikan terpusat jika wrap */
+    }
+
+    .sequence-part {
+        margin: 3px 5px;      /* Kurangi margin antar bagian */
+        letter-spacing: 2px;  /* Kurangi jarak antar angka */
+        font-size: 1em; /* Sesuaikan jika perlu */
+    }
+
+    .sequence-separator {
+        margin: 3px 3px; /* Kurangi margin pemisah */
+    }
+
+    .letter-group {
+        gap: 8px; /* Kurangi jarak antar pasangan huruf-angka */
+        flex-wrap: wrap; /* Biarkan pasangan huruf-angka wrap jika perlu */
+        justify-content: center; /* Pusatkan pasangan jika wrap */
+        width: 100%; /* Biarkan grup huruf mengisi lebar jika wrap */
+        margin-top: 5px; /* Beri jarak jika wrap di bawah part1 */
+        margin-bottom: 5px; /* Beri jarak jika wrap di atas part3 */
+    }
+
+    .letter-number-pair {
+        min-width: 18px; /* Sedikit lebih kecil */
+        margin-bottom: 5px; /* Jarak jika wrap */
+    }
+
+    .letter-number-pair .letter {
+        font-size: 0.95em; /* Kecilkan sedikit huruf */
+    }
+
+    .letter-number-pair .number {
+        font-size: 0.75em; /* Kecilkan angka asosiasi */
+    }
+
+    /* --- Penyesuaian Opsi Jawaban --- */
+    .option-button,
+    .option-container.labeled-option {
+        padding: 10px 12px; /* Padding lebih kecil pada tombol/opsi */
+        font-size: 0.95em; /* Font lebih kecil */
+    }
+
+    .option-label {
+        min-width: 60px; /* Kurangi lebar minimum label */
+        margin-right: 10px;
+        font-size: 0.85em;
+    }
+
+     .option-checkbox-visual {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+     }
+
+     .option-value {
+        font-size: 0.95em;
+     }
+
+
+    /* --- Penyesuaian Tombol Lain --- */
+    #next-button,
+    #back-button {
+        padding: 10px 25px;
+        font-size: 0.95em;
+        min-width: auto; /* Biarkan lebar tombol lebih fleksibel */
+    }
+
+    .category-button {
+        padding: 12px 15px;
+        font-size: 1em;
+        width: 90%; /* Sedikit lebih lebar di mobile */
+    }
+
+} /* Akhir dari @media (max-width: 700px) */
+
+/* Anda bisa menambahkan breakpoint lain jika perlu, misal untuk layar sangat kecil */
+/* @media (max-width: 480px) { */
+/*     h1 { font-size: 1.8em; } */
+/*     #sequence-display { font-size: 0.9em; } */
+/* } */
