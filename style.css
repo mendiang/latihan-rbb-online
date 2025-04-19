@@ -475,8 +475,8 @@ h1 {
 
     /* --- Penyesuaian Spesifik untuk Sequence Display --- */
     #sequence-display {
-        padding: 10px 5px;  /* Kurangi padding internal sequence */
-        font-size: 1em;     /* Kecilkan sedikit font dasar sequence */
+        padding: 8px 5px;  /* Kurangi padding internal sequence */
+        font-size: 0.85em;     /* Kecilkan sedikit font dasar sequence */
         /* Pastikan flex-wrap masih ada jika diperlukan */
         flex-wrap: wrap;
         justify-content: center; /* Pastikan terpusat jika wrap */
@@ -484,34 +484,36 @@ h1 {
 
     .sequence-part {
         margin: 3px 5px;      /* Kurangi margin antar bagian */
-        letter-spacing: 2px;  /* Kurangi jarak antar angka */
-        font-size: 1em; /* Sesuaikan jika perlu */
+        letter-spacing: 1px;  /* Kurangi jarak antar angka */
+        white-space: normal;  /* Izinkan angka wrap jika satu bagian terlalu panjang (opsional) */
+        text-align: center;   /* Pusatkan jika wrap */
     }
 
     .sequence-separator {
-        margin: 3px 3px; /* Kurangi margin pemisah */
+        margin: 2px 4px; /* Kurangi margin pemisah */
+        font-size: 1em;       /* Kecilkan pemisah sedikit */
     }
 
     .letter-group {
-        gap: 8px; /* Kurangi jarak antar pasangan huruf-angka */
-        flex-wrap: wrap; /* Biarkan pasangan huruf-angka wrap jika perlu */
-        justify-content: center; /* Pusatkan pasangan jika wrap */
-        width: 100%; /* Biarkan grup huruf mengisi lebar jika wrap */
-        margin-top: 5px; /* Beri jarak jika wrap di bawah part1 */
-        margin-bottom: 5px; /* Beri jarak jika wrap di atas part3 */
+        gap: 5px; /* Kurangi jarak antar pasangan huruf-angka */
+        /* Hapus atau komentari baris ini jika ada: */
+        /* flex-wrap: nowrap; */
+        width: auto;
+        margin: 0;        /* Hapus margin vertikal tambahan */
+        padding: 0 5px;   /* Beri sedikit padding horizontal untuk grup huruf */
     }
 
     .letter-number-pair {
-        min-width: 18px; /* Sedikit lebih kecil */
-        margin-bottom: 5px; /* Jarak jika wrap */
+        min-width: auto; /* Sedikit lebih kecil */
+        margin-bottom: 0 2px; /* Jarak jika wrap */
     }
 
     .letter-number-pair .letter {
-        font-size: 0.95em; /* Kecilkan sedikit huruf */
+        font-size: 0.9em; /* Kecilkan sedikit huruf */
     }
 
     .letter-number-pair .number {
-        font-size: 0.75em; /* Kecilkan angka asosiasi */
+        font-size: 0.7em; /* Kecilkan angka asosiasi */
     }
 
     /* --- Penyesuaian Opsi Jawaban --- */
@@ -554,8 +556,20 @@ h1 {
 
 } /* Akhir dari @media (max-width: 700px) */
 
-/* Anda bisa menambahkan breakpoint lain jika perlu, misal untuk layar sangat kecil */
-/* @media (max-width: 480px) { */
-/*     h1 { font-size: 1.8em; } */
-/*     #sequence-display { font-size: 0.9em; } */
-/* } */
+@media (max-width: 400px) {
+    #sequence-display {
+        font-size: 0.75em; /* Lebih kecil lagi */
+        flex-direction: column; /* OPSI TERAKHIR: Stack vertikal jika tidak muat */
+        align-items: center;
+    }
+    .sequence-separator {
+        display: none; /* Sembunyikan pemisah jika vertikal */
+    }
+    .sequence-part, .letter-group {
+        margin: 5px 0; /* Beri jarak vertikal */
+    }
+    .letter-group {
+        flex-wrap: wrap; /* Biarkan pasangan huruf wrap di dalam grup */
+        justify-content: center;
+    }
+}
