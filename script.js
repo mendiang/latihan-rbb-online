@@ -315,6 +315,45 @@ const questions = [
         explanation: "25 seharsunya 23 karena pola nya ditambah 3 (1 larik) ",
         category: "TKD" // Atau kategori spesifik "Pola Deret"
     },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "27 21 15",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [9, 3, -3, -9, -18],
+            part3: "-21 -27 -33"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "e", // 
+        explanation: "-18 seharsunya -15 karena pola nya dikurang 6 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "11 24 15",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [21, 19, 20, 23, 15],
+            part3: "27 12 31"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "c", // 
+        explanation: "20 seharsunya 18 karena pola nya dikurang 3 (2 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "2 10 4",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [22, 28, 34, 16, 46],
+            part3: "32 58 64"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "b", // 
+        explanation: "28 seharsunya 8 karena pola nya dikali 2 (2 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
 
     // Tambahkan soal-soal RBB Anda di sini...
     // Contoh soal AKHLAK:
@@ -326,7 +365,7 @@ const questions = [
     // }
 ];
 
-const TIME_PER_QUESTION = 30; // Detik per soal (sesuaikan!)
+const TIME_PER_QUESTION = 60; // Detik per soal (sesuaikan!)
 
 // --- 2. VARIABEL GLOBAL & ELEMEN DOM ---
 let currentQuestionIndex = 0;
