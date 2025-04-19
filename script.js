@@ -383,10 +383,311 @@ const questions = [
             { id: 'E', image: 'images/opsi_e.png' }
         ],
 
-        correctAnswer: 'C', // Sesuaikan
-        explanation: "Penjelasan: [Jelaskan pola logikanya di sini.]",
+        correctAnswer: 'E', // Sesuaikan
+        explanation: "Pencerminan Vertikal",
         // timeLimit: 60 // Opsional
     },
+    {
+        question: "Lembaga yang berwenang memeriksa pengelolaan dan tanggung jawab keuangan negara adalah...",
+        options: ["BPK", "KPK", "MA", "DPR"],
+        correctAnswer: "BPK",
+        explanation: "BPK (Badan Pemeriksa Keuangan) adalah lembaga negara yang memiliki wewenang memeriksa pengelolaan dan tanggung jawab keuangan negara.",
+        category: "TWK"
+    },
+    {
+        question: "Sila pertama dalam Pancasila adalah...",
+        options: ["Kemanusiaan yang adil dan beradab", "Ketuhanan Yang Maha Esa", "Keadilan sosial bagi seluruh rakyat Indonesia", "Persatuan Indonesia"],
+        correctAnswer: "Ketuhanan Yang Maha Esa",
+        explanation: "Sila pertama dalam Pancasila adalah 'Ketuhanan Yang Maha Esa' yang mencerminkan dasar spiritual dan religius bangsa Indonesia.",
+        category: "TWK"
+    },
+    {
+        question: "UUD 1945 pertama kali disahkan pada tanggal...",
+        options: ["1 Juni 1945", "17 Agustus 1945", "18 Agustus 1945", "20 Oktober 1945"],
+        correctAnswer: "18 Agustus 1945",
+        explanation: "UUD 1945 disahkan oleh PPKI pada tanggal 18 Agustus 1945, sehari setelah Proklamasi Kemerdekaan.",
+        category: "TWK"
+    },
+    {
+        question: "Semboyan negara Indonesia adalah...",
+        options: ["Garuda Pancasila", "Indonesia Raya", "Bhinneka Tunggal Ika", "Tanah Air Beta"],
+        correctAnswer: "Bhinneka Tunggal Ika",
+        explanation: "Bhinneka Tunggal Ika berarti 'Berbeda-beda tetapi tetap satu', mencerminkan keberagaman suku, budaya, dan agama di Indonesia.",
+        category: "TWK"
+    },
+    {
+        question: "Strategi 'devide et impera' yang diterapkan Belanda terhadap bangsa Indonesia berarti...",
+        options: ["Bersatu kita teguh, bercerai kita runtuh", "Membagi wilayah Indonesia menjadi beberapa provinsi", "Memecah belah kekuatan bangsa untuk dikuasai", "Menjajah melalui perdagangan"],
+        correctAnswer: "Memecah belah kekuatan bangsa untuk dikuasai",
+        explanation: "'Devide et impera' adalah strategi penjajahan Belanda yang berarti 'adu domba' atau 'memecah belah', dengan tujuan agar bangsa Indonesia tidak bersatu dan mudah untuk dikuasai.",
+        category: "TWK"
+    },
+    {
+        question: "Contoh nyata penerapan politik 'devide et impera' oleh Belanda di Indonesia adalah...",
+        options: ["Mengadu domba antar kerajaan atau suku", "Mendirikan sekolah untuk pribumi", "Memberikan hak suara kepada rakyat", "Membangun infrastruktur jalan"],
+        correctAnswer: "Mengadu domba antar kerajaan atau suku",
+        explanation: "Belanda sering mengadu domba antar kerajaan atau suku di Indonesia agar mereka saling bertikai dan tidak bersatu melawan penjajahan.",
+        category: "TWK"
+    },
+    {
+        question: "Tujuan utama dari politik adu domba (devide et impera) adalah...",
+        options: ["Membangun solidaritas bangsa", "Menghindari peperangan", "Menguasai wilayah dengan mudah", "Melindungi kepentingan rakyat"],
+        correctAnswer: "Menguasai wilayah dengan mudah",
+        explanation: "Dengan memecah belah kelompok-kelompok lokal, penjajah dapat lebih mudah menguasai wilayah karena tidak ada perlawanan yang terorganisir.",
+        category: "TWK"
+    },
+    {
+        question: "Contoh pengamalan sila pertama Pancasila dalam kehidupan sehari-hari adalah...",
+        options: ["Menghormati agama orang lain", "Bersikap adil kepada sesama", "Bermusyawarah dalam mengambil keputusan", "Menjaga persatuan di lingkungan masyarakat"],
+        correctAnswer: "Menghormati agama orang lain",
+        explanation: "Sila pertama Pancasila, 'Ketuhanan Yang Maha Esa', diwujudkan dalam sikap saling menghormati antar umat beragama.",
+        category: "TWK"
+    },
+    {
+        question: "Sikap membantu tetangga yang sedang kesusahan mencerminkan pengamalan sila ke...",
+        options: ["Kedua", "Ketiga", "Keempat", "Kelima"],
+        correctAnswer: "Kedua",
+        explanation: "Sila kedua berbunyi 'Kemanusiaan yang adil dan beradab', salah satunya diwujudkan dalam sikap saling tolong-menolong.",
+        category: "TWK"
+    },
+    {
+        question: "Contoh pengamalan sila ketiga Pancasila adalah...",
+        options: ["Beribadah sesuai agama masing-masing", "Mengutamakan kepentingan bangsa di atas kepentingan pribadi", "Menghormati pendapat orang lain", "Membayar pajak tepat waktu"],
+        correctAnswer: "Mengutamakan kepentingan bangsa di atas kepentingan pribadi",
+        explanation: "Sila ketiga, 'Persatuan Indonesia', menekankan pentingnya mengutamakan persatuan dan kepentingan nasional.",
+        category: "TWK"
+    },
+    {
+        question: "Sikap suka bermusyawarah dalam mengambil keputusan mencerminkan pengamalan sila ke...",
+        options: ["Pertama", "Kedua", "Keempat", "Kelima"],
+        correctAnswer: "Keempat",
+        explanation: "Sila keempat berbunyi 'Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan/perwakilan', yang diwujudkan dalam musyawarah mufakat.",
+        category: "TWK"
+    },
+    {
+        question: "Contoh pengamalan sila kelima Pancasila adalah...",
+        options: ["Menghargai pendapat orang lain", "Bersikap adil kepada sesama", "Berdoa sebelum makan", "Ikut dalam pemilihan umum"],
+        correctAnswer: "Bersikap adil kepada sesama",
+        explanation: "Sila kelima, 'Keadilan sosial bagi seluruh rakyat Indonesia', menekankan pentingnya keadilan dalam kehidupan bermasyarakat.",
+        category: "TWK"
+    },
+    {
+        question: "Salah satu tugas utama MPR menurut UUD 1945 adalah...",
+        options: ["Membuat undang-undang", "Mengangkat duta besar", "Mengubah dan menetapkan Undang-Undang Dasar", "Melaksanakan putusan pengadilan"],
+        correctAnswer: "Mengubah dan menetapkan Undang-Undang Dasar",
+        explanation: "Menurut Pasal 3 UUD 1945, MPR memiliki wewenang untuk mengubah dan menetapkan Undang-Undang Dasar.",
+        category: "TWK"
+    },
+    {
+        question: "Lembaga negara yang berwenang melantik Presiden dan/atau Wakil Presiden adalah...",
+        options: ["DPR", "MA", "MPR", "KPU"],
+        correctAnswer: "MPR",
+        explanation: "MPR memiliki wewenang melantik Presiden dan/atau Wakil Presiden berdasarkan hasil pemilu.",
+        category: "TWK"
+    },
+    {
+        question: "Jika Presiden dan Wakil Presiden mangkat secara bersamaan, MPR bertugas untuk...",
+        options: ["Menunjuk pengganti dari kalangan militer", "Menetapkan pelaksana tugas Presiden", "Memilih Presiden dan Wakil Presiden baru dari dua calon yang diusulkan DPR", "Menunjuk Ketua Mahkamah Agung sebagai Presiden"],
+        correctAnswer: "Memilih Presiden dan Wakil Presiden baru dari dua calon yang diusulkan DPR",
+        explanation: "Sesuai UUD 1945 Pasal 8 Ayat (3), MPR memilih Presiden dan Wakil Presiden dari dua calon yang diusulkan DPR apabila terjadi kekosongan jabatan.",
+        category: "TWK"
+    },
+    {
+        question: "Keanggotaan MPR terdiri atas...",
+        options: ["Hanya anggota DPR", "Anggota DPR dan Presiden", "Anggota DPR dan DPD", "Anggota DPR dan MA"],
+        correctAnswer: "Anggota DPR dan DPD",
+        explanation: "MPR terdiri dari anggota DPR dan anggota DPD sebagaimana diatur dalam Pasal 2 UUD 1945.",
+        category: "TWK"
+    },
+    {
+        question: "Berikut ini yang bukan merupakan wewenang MPR adalah...",
+        options: ["Mengubah UUD", "Melantik Presiden", "Mengangkat menteri", "Memutuskan usul pemberhentian Presiden"],
+        correctAnswer: "Mengangkat menteri",
+        explanation: "Pengangkatan menteri merupakan hak prerogatif Presiden, bukan wewenang MPR.",
+        category: "TWK"
+    },
+    {
+        question: "Trias Politica adalah teori pemisahan kekuasaan yang dikemukakan oleh...",
+        options: ["John Locke", "Karl Marx", "Montesquieu", "Thomas Hobbes"],
+        correctAnswer: "Montesquieu",
+        explanation: "Teori Trias Politica dikemukakan oleh Montesquieu dalam bukunya 'L'esprit des lois' untuk mencegah kekuasaan absolut.",
+        category: "TWK"
+    },
+    {
+        question: "Berikut ini yang termasuk dalam tiga cabang kekuasaan menurut teori Trias Politica adalah...",
+        options: ["Eksekutif, Yudikatif, Legislatif", "Presiden, Menteri, DPR", "Negara, Rakyat, Pemerintah", "Pusat, Provinsi, Kabupaten"],
+        correctAnswer: "Eksekutif, Yudikatif, Legislatif",
+        explanation: "Trias Politica membagi kekuasaan negara menjadi tiga, yaitu eksekutif (pelaksana), legislatif (pembuat UU), dan yudikatif (pengawas hukum).",
+        category: "TWK"
+    },
+    {
+        question: "Di Indonesia, lembaga yang menjalankan fungsi legislatif adalah...",
+        options: ["Mahkamah Agung", "DPR", "Presiden", "KPK"],
+        correctAnswer: "DPR",
+        explanation: "DPR (Dewan Perwakilan Rakyat) menjalankan fungsi legislatif, yaitu membuat undang-undang bersama Presiden.",
+        category: "TWK"
+    },
+    {
+        question: "Lembaga yang menjalankan kekuasaan eksekutif di Indonesia adalah...",
+        options: ["DPR dan DPD", "Mahkamah Konstitusi", "Presiden dan Wakil Presiden", "BPK dan MA"],
+        correctAnswer: "Presiden dan Wakil Presiden",
+        explanation: "Presiden dan Wakil Presiden menjalankan kekuasaan eksekutif, yaitu menjalankan pemerintahan sehari-hari.",
+        category: "TWK"
+    },
+    {
+        question: "Yang termasuk lembaga yudikatif di Indonesia adalah...",
+        options: ["Presiden dan DPR", "MA dan MK", "DPR dan DPD", "BPK dan KPU"],
+        correctAnswer: "MA dan MK",
+        explanation: "Lembaga yudikatif di Indonesia adalah Mahkamah Agung (MA) dan Mahkamah Konstitusi (MK), yang berperan dalam menegakkan hukum dan konstitusi.",
+        category: "TWK"
+    },
+    {
+        question: "Bentuk partisipasi warga negara dalam usaha pertahanan negara adalah...",
+        options: ["Membayar pajak", "Menjadi anggota partai politik", "Mengikuti pelatihan bela negara", "Berjualan di lingkungan TNI"],
+        correctAnswer: "Mengikuti pelatihan bela negara",
+        explanation: "Salah satu bentuk partisipasi warga negara dalam usaha pertahanan negara adalah mengikuti pelatihan bela negara sebagaimana diatur dalam Undang-Undang.",
+        category: "TWK"
+    },
+    {
+        question: "Dasar hukum penyelenggaraan pertahanan negara di Indonesia adalah...",
+        options: ["UUD 1945 Pasal 27 Ayat (3)", "UUD 1945 Pasal 30", "Undang-Undang Perpajakan", "Undang-Undang Pemilu"],
+        correctAnswer: "UUD 1945 Pasal 30",
+        explanation: "UUD 1945 Pasal 30 mengatur hak dan kewajiban warga negara dalam usaha pertahanan dan keamanan negara.",
+        category: "TWK"
+    },
+    {
+        question: "Komponen utama dalam sistem pertahanan negara adalah...",
+        options: ["Polisi", "Rakyat", "TNI", "Satpol PP"],
+        correctAnswer: "TNI",
+        explanation: "Menurut UU No. 3 Tahun 2002 tentang Pertahanan Negara, TNI merupakan komponen utama dalam sistem pertahanan negara.",
+        category: "TWK"
+    },
+    {
+        question: "Warga negara memiliki hak dan kewajiban dalam usaha pertahanan dan keamanan negara. Hal ini tertuang dalam...",
+        options: ["Pasal 28", "Pasal 30", "Pasal 33", "Pasal 35"],
+        correctAnswer: "Pasal 30",
+        explanation: "Pasal 30 UUD 1945 menyatakan bahwa tiap-tiap warga negara berhak dan wajib ikut serta dalam usaha pertahanan dan keamanan negara.",
+        category: "TWK"
+    },
+    {
+        question: "Sistem pertahanan negara Indonesia bersifat...",
+        options: ["Statis dan terpusat", "Total dan semesta", "Sentralistik dan ofensif", "Eksekutif dan represif"],
+        correctAnswer: "Total dan semesta",
+        explanation: "Pertahanan negara Indonesia menganut sistem pertahanan rakyat semesta, yang melibatkan seluruh warga negara, wilayah, dan sumber daya nasional secara total.",
+        category: "TWK"
+    },
+    {
+        question: "Tokoh pejuang wanita dari Aceh yang dikenal Belanda dengan nama 'Joan of Arc dari Aceh' adalah...",
+        options: ["Cut Nyak Dien", "Cut Meutia", "Laksamana Malahayati", "Rohana Kudus"],
+        correctAnswer: "Cut Nyak Dien",
+        explanation: "Cut Nyak Dien dijuluki 'Joan of Arc dari Aceh' oleh Belanda karena keberaniannya memimpin perlawanan rakyat Aceh melawan penjajahan.",
+        category: "TWK"
+    },
+    {
+        question: "Cut Nyak Dien dikenal oleh Belanda karena...",
+        options: ["Menjadi duta besar Aceh di Belanda", "Berjuang gigih melawan penjajahan Belanda di Aceh", "Menjadi guru bagi anak-anak Belanda", "Mendirikan sekolah Belanda di Aceh"],
+        correctAnswer: "Berjuang gigih melawan penjajahan Belanda di Aceh",
+        explanation: "Cut Nyak Dien adalah pahlawan nasional yang memimpin perlawanan rakyat Aceh melawan penjajahan Belanda setelah gugurnya suaminya, Teuku Umar.",
+        category: "TWK"
+    },
+    {
+        question: "Menghargai dan menghormati perbedaan agama di lingkungan masyarakat merupakan contoh pengamalan sila ke...",
+        options: ["Pertama", "Kedua", "Ketiga", "Keempat"],
+        correctAnswer: "Pertama",
+        explanation: "Penghormatan terhadap perbedaan agama mencerminkan pengamalan sila pertama Pancasila yaitu 'Ketuhanan Yang Maha Esa'.",
+        category: "TWK"
+    },
+    {
+        question: "Mengikuti kerja bakti membersihkan lingkungan adalah wujud pengamalan sila ke...",
+        options: ["Kedua", "Ketiga", "Keempat", "Kelima"],
+        correctAnswer: "Ketiga",
+        explanation: "Kerja bakti mencerminkan semangat persatuan dan gotong royong yang merupakan nilai dari sila ketiga Pancasila, 'Persatuan Indonesia'.",
+        category: "TWK"
+    },
+    {
+        question: "Sikap adil dalam memperlakukan teman tanpa membedakan suku dan agama mencerminkan pengamalan sila ke...",
+        options: ["Pertama", "Kedua", "Keempat", "Kelima"],
+        correctAnswer: "Kedua",
+        explanation: "Sila kedua Pancasila, 'Kemanusiaan yang adil dan beradab', mengajarkan kita untuk memperlakukan sesama manusia secara adil dan beradab tanpa diskriminasi.",
+        category: "TWK"
+    },
+    {
+        question: "Menghargai pendapat orang lain saat diskusi merupakan pengamalan sila ke...",
+        options: ["Pertama", "Kedua", "Keempat", "Kelima"],
+        correctAnswer: "Keempat",
+        explanation: "Sikap menghargai pendapat merupakan bentuk dari pengamalan sila keempat, 'Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyawaratan/perwakilan'.",
+        category: "TWK"
+    },
+    {
+        question: "Berusaha membantu teman yang kurang mampu di sekolah adalah contoh pengamalan sila ke...",
+        options: ["Kedua", "Ketiga", "Keempat", "Kelima"],
+        correctAnswer: "Kelima",
+        explanation: "Tindakan membantu sesama mencerminkan pengamalan sila kelima Pancasila yaitu 'Keadilan sosial bagi seluruh rakyat Indonesia'.",
+        category: "TWK"
+    },
+    {
+        question: "Dr. Snouck Hurgronje dikenal sebagai seorang orientalis yang berperan penting dalam kolonialisme Belanda di Indonesia. Salah satu perannya yang kontroversial adalah...",
+        options: ["Menjadi penasihat Belanda dalam menghadapi perlawanan Aceh", "Mengorganisir perlawanan terhadap Belanda di Sumatera", "Mendirikan sekolah-sekolah Islam di Jawa", "Mendirikan organisasi pergerakan kemerdekaan Indonesia"],
+        correctAnswer: "Menjadi penasihat Belanda dalam menghadapi perlawanan Aceh",
+        explanation: "Dr. Snouck Hurgronje adalah seorang orientalis Belanda yang terkenal karena peranannya sebagai penasihat kolonial Belanda dalam menghadapi perlawanan rakyat Aceh pada masa penjajahan.",
+        category: "TWK"
+    },
+    {
+        question: "Dr. Snouck Hurgronje memanfaatkan pengetahuan tentang budaya Aceh untuk...",
+        options: ["Menggali potensi ekonomi Aceh", "Mengendalikan perlawanan Aceh dengan cara diplomatik", "Membantu perjuangan kemerdekaan Indonesia", "Mendirikan sekolah agama di Aceh"],
+        correctAnswer: "Mengendalikan perlawanan Aceh dengan cara diplomatik",
+        explanation: "Dr. Snouck Hurgronje menggunakan pengetahuan mendalam tentang budaya dan agama Aceh untuk mengendalikan perlawanan dengan cara diplomatik, termasuk memanfaatkan perbedaan dalam masyarakat Aceh.",
+        category: "TWK"
+    },
+    {
+        question: "Abdul Gafur adalah seorang tokoh penting dalam pergerakan kemerdekaan Indonesia, terutama dalam perjuangan di Aceh. Beliau dikenal karena...",
+        options: ["Mendirikan organisasi perlawanan di Aceh", "Bergabung dengan pasukan Belanda untuk melawan perlawanan Indonesia", "Menjadi jenderal dalam perang kemerdekaan Indonesia", "Menulis buku tentang sejarah perjuangan Aceh"],
+        correctAnswer: "Mendirikan organisasi perlawanan di Aceh",
+        explanation: "Abdul Gafur adalah seorang tokoh perlawanan yang berperan dalam memimpin perjuangan rakyat Aceh melawan penjajahan Belanda dengan mendirikan organisasi-organisasi perlawanan.",
+        category: "TWK"
+    },
+    {
+        question: "Dalam konteks perjuangan Indonesia, Dr. Snouck Hurgronje sering dikritik karena peranannya yang lebih menguntungkan Belanda. Ia dikenal sebagai...",
+        options: ["Pahlawan Indonesia", "Penasihat Belanda dalam menghadapi Aceh", "Pemimpin perjuangan kemerdekaan", "Pengikut perlawanan Indonesia"],
+        correctAnswer: "Penasihat Belanda dalam menghadapi Aceh",
+        explanation: "Dr. Snouck Hurgronje dikenal karena peranannya sebagai penasihat Belanda yang menggunakan pengetahuan tentang budaya Aceh untuk mengatasi perlawanan rakyat Aceh.",
+        category: "TWK"
+    },
+    {
+        question: "Dekrit Presiden 5 Juli 1959 berisi tentang...",
+        options: ["Pembubaran partai politik", "Kembalinya UUD 1945 sebagai dasar negara", "Pemberontakan di wilayah Indonesia Timur", "Pembentukan pemerintahan darurat"],
+        correctAnswer: "Kembalinya UUD 1945 sebagai dasar negara",
+        explanation: "Dekrit Presiden 5 Juli 1959 mengembalikan UUD 1945 sebagai dasar negara setelah sebelumnya menggunakan UUD Sementara 1950.",
+        category: "TWK"
+    },
+    {
+        question: "Dekrit Presiden 5 Juli 1959 dikeluarkan oleh Presiden Soekarno karena...",
+        options: ["Pemerintahan tidak dapat berjalan sesuai dengan UUD Sementara", "Adanya ancaman dari luar negeri", "Pemberontakan daerah yang meluas", "Proses pemilu yang berlangsung tidak lancar"],
+        correctAnswer: "Pemerintahan tidak dapat berjalan sesuai dengan UUD Sementara",
+        explanation: "Dekrit Presiden 5 Juli 1959 dikeluarkan karena pemerintahan Indonesia tidak dapat berjalan efektif dengan menggunakan UUD Sementara 1950, sehingga Presiden Soekarno memutuskan untuk kembali ke UUD 1945.",
+        category: "TWK"
+    },
+    {
+        question: "Akibat dikeluarkannya Dekrit Presiden 5 Juli 1959, Indonesia kembali ke sistem pemerintahan...",
+        options: ["Presidensial", "Parlementer", "Demokrasi Pancasila", "Berbasis desentralisasi"],
+        correctAnswer: "Presidensial",
+        explanation: "Dengan dikeluarkannya Dekrit Presiden, Indonesia kembali menggunakan sistem pemerintahan presidensial sesuai dengan UUD 1945.",
+        category: "TWK"
+    },
+    {
+        question: "Dekrit Presiden 5 Juli 1959 juga menyebabkan pembubaran...",
+        options: ["Partai Nasional Indonesia", "Dewan Konstituante", "DPR", "Mahkamah Agung"],
+        correctAnswer: "Dewan Konstituante",
+        explanation: "Pembubaran Dewan Konstituante terjadi setelah dikeluarkannya Dekrit Presiden 5 Juli 1959 karena Dewan Konstituante gagal merumuskan UUD yang baru dan menyebabkan ketegangan politik.",
+        category: "TWK"
+    },
+    {
+        question: "Dekrit Presiden 5 Juli 1959 memiliki pengaruh besar terhadap sistem pemerintahan Indonesia, karena...",
+        options: ["Mengganti UUD 1945 dengan UUD Sementara", "Menyatukan kembali Indonesia setelah pemberontakan", "Menghentikan sistem parlementer dan mengembalikan sistem presidensial", "Membentuk sistem kerajaan di Indonesia"],
+        correctAnswer: "Menghentikan sistem parlementer dan mengembalikan sistem presidensial",
+        explanation: "Dekrit Presiden 5 Juli 1959 menghentikan sistem parlementer yang ada pada masa itu dan mengembalikan sistem pemerintahan presidensial berdasarkan UUD 1945.",
+        category: "TWK"
+    }
 
     // ... soal-soal lain ...
 
