@@ -753,3 +753,81 @@ h1 {
 .image-option-container.correct.disabled {
      opacity: 1 !important; /* Paksa opacity kembali */
 }
+
+/* Styling untuk Area Bacaan */
+#passage-area {
+    background-color: #f8f9fa; /* Background lembut */
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px; /* Jarak ke area opsi */
+    margin-top: 15px; /* Jarak dari info nomor soal/timer */
+    text-align: left; /* Pastikan teks rata kiri */
+    line-height: 1.7; /* Tingkatkan sedikit jarak antar baris */
+    color: #343a40; /* Warna teks sedikit lebih gelap */
+}
+
+#passage-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #0056b3; /* Samakan dengan H1? */
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#passage-intro {
+    margin-bottom: 15px;
+    white-space: pre-line; /* Agar \n di data JS jadi baris baru */
+}
+
+#passage-facts-list {
+    margin-bottom: 15px;
+    padding-left: 0; /* Hapus padding default jika pakai div */
+}
+
+.passage-fact {
+    margin-bottom: 8px;
+    /* Jika ingin indentasi seperti list: */
+    /* padding-left: 20px; */
+    /* position: relative; */
+}
+/* Jika ingin nomor otomatis pakai <ol> atau counter CSS */
+/*
+#passage-facts-list { list-style: none; counter-reset: fact-counter; padding-left: 0; }
+.passage-fact::before { counter-increment: fact-counter; content: counter(fact-counter) ". "; font-weight: bold; margin-right: 5px; }
+*/
+
+
+#reading-question-text {
+    font-weight: 600;
+    margin-top: 20px; /* Jarak setelah fakta */
+    margin-bottom: 10px;
+    color: #212529;
+}
+
+#conclusion-text {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #e9ecef; /* Background berbeda untuk simpulan */
+    border-left: 4px solid #007bff; /* Aksen biru */
+    font-style: italic;
+    color: #495057;
+}
+
+/* Pastikan style .option-button sudah ada dan sesuai */
+/* .option-button { ... } */
+/* .option-button.correct { ... } */
+/* .option-button.incorrect { ... } */
+/* .option-button.disabled { ... } */
+
+/* --- Penyesuaian Responsif (Opsional) --- */
+@media (max-width: 700px) {
+    #passage-area {
+        padding: 15px;
+    }
+    #passage-title {
+        font-size: 1.15em;
+    }
+}

@@ -687,7 +687,102 @@ const questions = [
         correctAnswer: "Menghentikan sistem parlementer dan mengembalikan sistem presidensial",
         explanation: "Dekrit Presiden 5 Juli 1959 menghentikan sistem parlementer yang ada pada masa itu dan mengembalikan sistem pemerintahan presidensial berdasarkan UUD 1945.",
         category: "TWK"
-    }
+    },
+    {
+        question: "Jenderal J.H.R. Kohler adalah tokoh Belanda yang tewas dalam pertempuran saat menyerbu wilayah...",
+        options: ["Surabaya", "Banten", "Aceh", "Padang"],
+        correctAnswer: "Aceh",
+        explanation: "Jenderal J.H.R. Kohler adalah tokoh militer Belanda yang memimpin penyerangan ke Kesultanan Aceh pada tahun 1873 dan tewas dalam pertempuran di Masjid Raya Baiturrahman, Banda Aceh.",
+        category: "TWK"
+    },
+    {
+        question: "Peristiwa gugurnya Jenderal Kohler menandai dimulainya...",
+        options: ["Perang Diponegoro", "Perang Aceh", "Perang Padri", "Perang Jawa"],
+        correctAnswer: "Perang Aceh",
+        explanation: "Gugurnya Jenderal Kohler pada tahun 1873 menjadi penanda dimulainya Perang Aceh antara Kesultanan Aceh dengan pemerintah kolonial Belanda.",
+        category: "TWK"
+    },
+    {
+        question: "Jenderal J.H.R. Kohler tewas saat mencoba merebut salah satu tempat suci umat Islam di Aceh, yaitu...",
+        options: ["Masjid Agung Al-Azhar", "Masjid Raya Baiturrahman", "Masjid Al-Aqsa", "Masjid Salman"],
+        correctAnswer: "Masjid Raya Baiturrahman",
+        explanation: "Jenderal Kohler tewas ditembak oleh pejuang Aceh di halaman Masjid Raya Baiturrahman pada saat serangan militer Belanda terhadap Kesultanan Aceh.",
+        category: "TWK"
+    },
+    {
+        question: "Jenderal Jan van Swieten dikenal sebagai tokoh Belanda yang memimpin pasukan dalam perang melawan...",
+        options: ["Perang Diponegoro", "Perang Aceh", "Perang Padri", "Perang Bali"],
+        correctAnswer: "Perang Aceh",
+        explanation: "Jan van Swieten adalah jenderal Belanda yang ditugaskan memimpin ekspedisi militer Belanda kedua ke Aceh setelah kematian Jenderal Kohler dalam perang Aceh pertama.",
+        category: "TWK"
+    },
+    {
+        question: "Tujuan utama pengiriman Jenderal Jan van Swieten ke Aceh adalah...",
+        options: ["Menggantikan posisi Sultan Aceh", "Menjalin kerja sama ekonomi", "Melanjutkan serangan militer setelah gugurnya Jenderal Kohler", "Mendirikan sekolah Belanda di Aceh"],
+        correctAnswer: "Melanjutkan serangan militer setelah gugurnya Jenderal Kohler",
+        explanation: "Setelah Jenderal Kohler gugur pada tahun 1873, Jan van Swieten dikirim ke Aceh untuk memimpin ekspedisi militer kedua dan memperkuat pendudukan Belanda di wilayah tersebut.",
+        category: "TWK"
+    },
+    {
+        question: "Kebijakan militer yang dilakukan oleh Jan van Swieten dalam Perang Aceh menyebabkan...",
+        options: ["Aceh langsung menyerah", "Perang Aceh semakin meluas dan berlangsung lama", "Kemenangan cepat Belanda", "Pengangkatan Jan van Swieten sebagai raja di Aceh"],
+        correctAnswer: "Perang Aceh semakin meluas dan berlangsung lama",
+        explanation: "Meskipun Jan van Swieten berhasil menguasai ibu kota Kesultanan Aceh, namun perlawanan rakyat Aceh terus berlanjut dengan perang gerilya yang membuat perang berlangsung puluhan tahun.",
+        category: "TWK"
+    },
+    {
+        question: "Salah satu isi Dekrit Presiden 5 Juli 1959 adalah...",
+        options: [
+          "Pembentukan Majelis Permusyawaratan Rakyat Sementara (MPRS)",
+          "Pemberlakuan kembali UUD 1945 dan tidak berlakunya UUDS 1950",
+          "Pemilihan umum presiden secara langsung",
+          "Pembubaran kabinet parlementer"
+        ],
+        correctAnswer: "Pemberlakuan kembali UUD 1945 dan tidak berlakunya UUDS 1950",
+        explanation: "Dekrit Presiden 5 Juli 1959 menyatakan bahwa UUD 1945 kembali diberlakukan dan UUDS 1950 tidak berlaku lagi karena kegagalan Konstituante dalam menetapkan UUD baru.",
+        category: "TWK"
+    },
+    {
+        question: "Isi penting dari Dekrit Presiden 5 Juli 1959 adalah pembubaran...",
+        options: ["DPR", "MPR", "Konstituante", "Kabinet"],
+        correctAnswer: "Konstituante",
+        explanation: "Salah satu isi Dekrit Presiden adalah pembubaran Konstituante karena dianggap gagal menjalankan tugasnya menyusun UUD baru.",
+        category: "TWK"
+    },
+    {
+        question: "Dekrit Presiden 5 Juli 1959 dikeluarkan karena...",
+        options: [
+          "Tuntutan mahasiswa untuk mengganti presiden",
+          "Pemilu tidak dapat dilaksanakan",
+          "Konstituante gagal menetapkan UUD baru",
+          "Kudeta militer sedang berlangsung"
+        ],
+        correctAnswer: "Konstituante gagal menetapkan UUD baru",
+        explanation: "Konstituante gagal mencapai kesepakatan dalam merumuskan UUD baru, sehingga Presiden Soekarno mengeluarkan Dekrit untuk kembali ke UUD 1945.",
+        category: "TWK"
+    },
+    {
+        type: 'reading_comprehension', // Tipe baru untuk soal bacaan
+        category: 'TKD', // Atau kategori lain yang sesuai, misal: 'Penalaran Logis'
+        // --- Bagian Bacaan ---
+        passage_title: "PROGRAM PENDIDIKAN INKLUSI",
+        passage_intro: "SMP Harapan Bangsa adalah salah satu sekolah yang menerapkan program pendidikan inklusi, di mana siswa berkebutuhan khusus belajar bersama dengan siswa reguler dalam satu kelas. Sekolah ini percaya bahwa pendidikan inklusi dapat membantu menciptakan lingkungan belajar yang lebih inklusif dan saling menghargai.\nBeberapa fakta tentang SMP Harapan Bangsa:", // \n untuk baris baru potensial
+        passage_facts: [ // Array untuk menyimpan fakta bernomor
+            "1. Program pendidikan inklusi ini sudah berjalan selama lebih dari lima tahun.",
+            "2. Setiap kelas memiliki maksimal 25 siswa, dengan dua hingga tiga siswa berkebutuhan khusus di dalamnya.",
+            "3. Sekolah menyediakan guru pendamping khusus untuk membantu siswa berkebutuhan khusus dalam proses belajar.",
+            "4. Dalam survei terbaru, 85% orang tua siswa menyatakan puas dengan sistem pendidikan inklusi yang diterapkan sekolah ini.",
+            "5. SMP Harapan Bangsa sering dijadikan model oleh sekolah lain yang ingin menerapkan pendidikan inklusi."
+        ],
+        // --- Bagian Pertanyaan & Kesimpulan ---
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:", // Pertanyaan eksplisit
+        conclusion: "Semua siswa berkebutuhan khusus di SMP Harapan Bangsa mendapatkan pendampingan khusus.", // Simpulan yang dievaluasi
+        // --- Opsi Jawaban & Penjelasan ---
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Tidak dapat disimpulkan",
+        explanation: "Fakta nomor 3 hanya menyebutkan bahwa sekolah menyediakan guru pendamping khusus, namun tidak dijelaskan secara eksplisit apakah semua siswa berkebutuhan khusus mendapat pendampingan. Karena itu, simpulan tersebut tidak dapat dipastikan kebenarannya.",
+        // timeLimit: 90 // Opsional: Beri waktu lebih lama jika perlu
+    },
 
     // ... soal-soal lain ...
 
@@ -761,6 +856,13 @@ function displayQuestion(index) {
     if (oldPuzzleArea) oldPuzzleArea.remove();
     // Kosongkan area opsi SEBELUM rendering spesifik tipe
     optionsAreaEl.innerHTML = '';
+    // Sembunyikan/kosongkan area spesifik dari tipe lain
+    sequenceDisplayEl.innerHTML = '';
+    sequenceDisplayEl.style.display = 'none';
+    if (oldPuzzleArea) oldPuzzleArea.remove();
+    // Hapus area bacaan lama jika ada
+    const oldPassageArea = document.getElementById('passage-area');
+    if (oldPassageArea) oldPassageArea.remove();
 
     if (index >= currentQuizQuestions.length) {
         questionTextEl.textContent = "Latihan Selesai!";
@@ -780,7 +882,7 @@ function displayQuestion(index) {
     const currentQuestion = currentQuizQuestions[index];
     console.log("DISPLAY question data:", currentQuestion); // Log data soal
     questionNumberEl.textContent = `Soal ${index + 1} dari ${currentQuizQuestions.length}`;
-    questionTextEl.textContent = currentQuestion.question;
+    questionTextEl.textContent = '';
 
     // --- RENDER SOAL & OPSI BERDASARKAN TIPE ---
     if (currentQuestion.type === 'image_logic') {
@@ -866,20 +968,88 @@ function displayQuestion(index) {
             optionsAreaEl.appendChild(optionContainer);
         });
 
-    } else { // Untuk soal teks biasa
-        // optionsAreaEl.innerHTML = ''; // Sudah dikosongkan di awal
+    } else if (currentQuestion.type === 'reading_comprehension') { // <<<=== BLOK BARU
         optionsAreaEl.classList.remove('image-options-grid'); // Hapus styling grid
+
+        // 1. Buat Kontainer untuk Bacaan
+        const passageArea = document.createElement('div');
+        passageArea.id = 'passage-area'; // ID untuk styling
+        // BENAR:
+        const questionAreaEl = document.getElementById('question-area'); // Dapatkan div question-area
+        questionAreaEl.appendChild(passageArea); // Tambahkan passageArea sebagai anak terakhirnya
+        // 2. Tampilkan Judul Bacaan (jika ada)
+        if (currentQuestion.passage_title) {
+            const titleEl = document.createElement('h4'); // Atau h3
+            titleEl.id = 'passage-title';
+            titleEl.textContent = currentQuestion.passage_title;
+            passageArea.appendChild(titleEl);
+        }
+        // 3. Tampilkan Intro Bacaan
+        if (currentQuestion.passage_intro) {
+            const introEl = document.createElement('p');
+            introEl.id = 'passage-intro';
+            introEl.textContent = currentQuestion.passage_intro;
+            // introEl.style.whiteSpace = 'pre-line'; // Agar \n jadi baris baru
+            passageArea.appendChild(introEl);
+        }
+
+        // 4. Tampilkan Fakta-fakta Bacaan
+        if (currentQuestion.passage_facts && currentQuestion.passage_facts.length > 0) {
+            const factsList = document.createElement('div'); // Atau <ol> jika ingin nomor otomatis
+            factsList.id = 'passage-facts-list';
+            currentQuestion.passage_facts.forEach(factText => {
+                const factEl = document.createElement('p'); // Atau <li> jika pakai <ol>
+                factEl.classList.add('passage-fact');
+                factEl.textContent = factText;
+                factsList.appendChild(factEl);
+            });
+            passageArea.appendChild(factsList);
+        }
+
+        // 5. Tampilkan Pertanyaan Eksplisit (jika ada)
+        if (currentQuestion.question) {
+             const questionReadingEl = document.createElement('p');
+             questionReadingEl.id = 'reading-question-text';
+             questionReadingEl.textContent = currentQuestion.question;
+             passageArea.appendChild(questionReadingEl);
+        }
+
+
+        // 6. Tampilkan Kesimpulan yang Dievaluasi
+        if (currentQuestion.conclusion) {
+            const conclusionEl = document.createElement('blockquote'); // Blockquote cocok untuk kutipan/simpulan
+            conclusionEl.id = 'conclusion-text';
+            conclusionEl.textContent = currentQuestion.conclusion;
+            passageArea.appendChild(conclusionEl);
+        }
+
+        // 7. Tampilkan Opsi Jawaban (Gunakan logika tombol standar)
+        const shuffledOptions = shuffleArray(currentQuestion.options);
+        shuffledOptions.forEach(textOption => {
+            const button = document.createElement('button');
+            button.textContent = textOption;
+            button.classList.add('option-button'); // Pakai class tombol biasa
+            // Pastikan selectAnswer dipanggil dengan benar
+            button.onclick = () => selectAnswer(button, textOption, currentQuestion.correctAnswer, currentQuestion.explanation);
+            optionsAreaEl.appendChild(button);
+        });
+
+    } else { // Untuk soal teks biasa (default)
+        // ... (Kode rendering soal teks biasa - TIDAK BERUBAH) ...
+        questionTextEl.textContent = currentQuestion.question; // Set teks pertanyaan default
+        optionsAreaEl.classList.remove('image-options-grid'); // Hapus styling grid
+        // Update total soal di score area
+        // ... (render tombol opsi teks) ...
         const shuffledTextOptions = shuffleArray(currentQuestion.options);
         shuffledTextOptions.forEach(textOption => {
             const button = document.createElement('button');
-            button.textContent = textOption; // Benar untuk teks
+            button.textContent = textOption;
             button.classList.add('option-button');
             button.onclick = () => selectAnswer(button, textOption, currentQuestion.correctAnswer, currentQuestion.explanation);
             optionsAreaEl.appendChild(button);
         });
     }
-    
-    // Update total soal di score area
+    // --- AKHIR BLOK RENDER SPESIFIK TIPE ---
     totalQuestionsEl.textContent = currentQuizQuestions.length;
 
     // Modifikasi teks tombol next (Ini boleh tetap di sini)
@@ -899,8 +1069,8 @@ function selectAnswer(clickedElement, selectedValue, correctAnswer, explanation)
     answerSelected = true; // Tandai sudah memilih
     nextButtonEl.disabled = false; // Aktifkan tombol next
 
-    const currentQuestion = currentQuizQuestions[index]; // Ambil soal saat ini
-
+    const currentQuestion = currentQuizQuestions[currentQuestionIndex];
+    
     // Nonaktifkan semua tombol pilihan setelah memilih
     const allOptions = optionsAreaEl.querySelectorAll('.option-button, .option-container, .image-option-container');
     allOptions.forEach(optEl => {
@@ -915,7 +1085,7 @@ function selectAnswer(clickedElement, selectedValue, correctAnswer, explanation)
     resultAreaEl.style.display = 'block';
     explanationEl.textContent = `Penjelasan: ${explanation}`;
 
-    if (sselectedValue === correctAnswer) {
+    if (selectedValue === correctAnswer) {
         score++;
         scoreEl.textContent = score; // Update skor
         feedbackEl.textContent = "Jawaban Benar!";
@@ -943,7 +1113,7 @@ function selectAnswer(clickedElement, selectedValue, correctAnswer, explanation)
             // Cari tombol dengan teks yang cocok
             const buttons = optionsAreaEl.querySelectorAll('.option-button');
             buttons.forEach(btn => {
-                if (btn.textContent === correctAnswer) {
+                if (btn.textContent.trim() === correctAnswer.trim()) { // Gunakan trim untuk amannya
                     correctOptionElement = btn;
                 }
             });
