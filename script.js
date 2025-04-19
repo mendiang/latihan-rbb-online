@@ -133,6 +133,188 @@ const questions = [
         explanation: "30 seharsunya 81 karena pola nya dikurang 8 (1 larik) ",
         category: "TKD" // Atau kategori spesifik "Pola Deret"
     },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "30 37 36",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [15, 19, 18, 6, 13],
+            part3: "12 4 11"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "a", // 
+        explanation: "15 seharsunya 12 karena pola nya dibagi 3 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "1/64 1/32 1/16",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [1/8, 1/6, 1/2, 1, 2],
+            part3: "4 8 16"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "b", // 
+        explanation: "1/6 seharsunya 1/4 karena pola nya dikali 2 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "165 55 53",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [57, 51, 17, 21, 7],
+            part3: "5 9 3"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "b", // 
+        explanation: "51 seharsunya 19 karena pola nya dibagi 3 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "606 603 201",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [198, 189, 63, 21, 18],
+            part3: "6 3 1"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "b", // 
+        explanation: "189 seharsunya 66 karena pola nya dibagi 3 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "-1 2 4",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [9, 18, 25, 30, 59],
+            part3: "118 129 258"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "d", // 
+        explanation: "30 seharsunya 50 karena pola nya dikali 2 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "20 162 27",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [54, 34, 18, 41, 24],
+            part3: "48 2 55"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "e", // 
+        explanation: "24 seharsunya 6 karena pola nya dibagi 3 (2 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "19 16 13",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [10, 7, 4, 0, -2],
+            part3: "-5 -8 -11"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "d", // 
+        explanation: "0 seharsunya 1 karena pola nya dikurang 1 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "84 42 52",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [26, 36, 18, 28, 16],
+            part3: "24 12 22"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "e", // 
+        explanation: "16 seharsunya 14 karena pola nya dibagi 2 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "1 6 2",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [6, 11, 16, 21, 26],
+            part3: "22 66 71"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "c", // 
+        explanation: "16 seharsunya 7 karena pola nya dikurang 4 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "72 324 68",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [96, 64, 36, 60, 12],
+            part3: "56 4 52"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "a", // 
+        explanation: "96 seharsunya 108 karena pola nya dibagi 3 (2 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "-1 1 3",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [5, 10, 17, 51, 53],
+            part3: "159 161 483"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "b", // 
+        explanation: "20 seharsunya 25 karena pola nya dikali 3 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "729 243 81",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [27, 6, 3, 1, 1/3],
+            part3: "1/9 1/27 1/81"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "b", // 
+        explanation: "6 seharsunya 9 karena pola nya dibagi 3 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "1 -1 -2",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [-4, -8, -12, -20, -22],
+            part3: "-44 -46 -92"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "c", // 
+        explanation: "-12 seharsunya -10 karena pola nya dikurang 2 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
+    {
+        question: "Manakah huruf yang memiliki pola atau nilai yang berbeda dari kelompoknya?", // Ini contoh pertanyaan eksplisit
+        sequence: { // Objek baru untuk data deret
+            part1: "13 16 20",
+            letters: ["a", "b", "c", "d", "e"],
+            numbers: [25, 27, 30, 34, 37],
+            part3: "41 44 48"  
+        },
+        options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
+        correctAnswer: "a", // 
+        explanation: "25 seharsunya 23 karena pola nya ditambah 3 (1 larik) ",
+        category: "TKD" // Atau kategori spesifik "Pola Deret"
+    },
 
     // Tambahkan soal-soal RBB Anda di sini...
     // Contoh soal AKHLAK:
