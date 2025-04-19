@@ -151,7 +151,7 @@ const questions = [
         sequence: { // Objek baru untuk data deret
             part1: "1/64 1/32 1/16",
             letters: ["a", "b", "c", "d", "e"],
-            numbers: [1/8, 1/6, 1/2, 1, 2],
+            numbers: ["1/8", "1/6", "1/2", 1, 2],
             part3: "4 8 16"  
         },
         options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
@@ -281,7 +281,7 @@ const questions = [
         sequence: { // Objek baru untuk data deret
             part1: "729 243 81",
             letters: ["a", "b", "c", "d", "e"],
-            numbers: [27, 6, 3, 1, 1/3],
+            numbers: [27, 6, 3, 1, "1/3"],
             part3: "1/9 1/27 1/81"  
         },
         options: ["a", "b", "c", "d", "e"], // Opsi sesuai gambar (A, B, C, D)
@@ -354,6 +354,41 @@ const questions = [
         explanation: "28 seharsunya 8 karena pola nya dikali 2 (2 larik) ",
         category: "TKD" // Atau kategori spesifik "Pola Deret"
     },
+    {
+        type: 'image_logic',
+        question: "Perhatikan pola hubungan gambar berikut. Tentukan gambar yang tepat untuk mengisi tanda tanya.",
+        category: "TKD",
+
+        // BAGIAN 1: Gambar Fakta (Gunakan nama file tanpa _combined)
+        fact_images: [
+            // Pastikan file 'images/fact_row_1.png' benar-benar ada dan
+            // berisi gambar gabungan kiri->kanan untuk fakta 1
+            { image: 'images/fact_row_1.png', label: '1' },
+            { image: 'images/fact_row_2.png', label: '2' },
+            { image: 'images/fact_row_3.png', label: '3' },
+            { image: 'images/fact_row_4.png', label: '4' },
+            { image: 'images/fact_row_5.png', label: '5' },
+        ],
+
+        // BAGIAN 2: Gambar Soal Utama (Gunakan nama file tanpa _combined)
+        // Pastikan file 'images/main_question.png' berisi gambar gabungan ?->kanan
+        main_question_image: 'images/main_question.png',
+
+        // BAGIAN 3: Gambar Pilihan Jawaban (Tetap Sama)
+        options: [
+            { id: 'A', image: 'images/opsi_a.png' },
+            { id: 'B', image: 'images/opsi_b.png' },
+            { id: 'C', image: 'images/opsi_c.png' },
+            { id: 'D', image: 'images/opsi_d.png' },
+            { id: 'E', image: 'images/opsi_e.png' }
+        ],
+
+        correctAnswer: 'C', // Sesuaikan
+        explanation: "Penjelasan: [Jelaskan pola logikanya di sini.]",
+        // timeLimit: 60 // Opsional
+    },
+
+    // ... soal-soal lain ...
 
     // Tambahkan soal-soal RBB Anda di sini...
     // Contoh soal AKHLAK:
@@ -421,6 +456,10 @@ function displayQuestion(index) {
     const sequenceDisplayEl = document.getElementById('sequence-display');
     sequenceDisplayEl.innerHTML = ''; // Kosongkan dulu
     sequenceDisplayEl.style.display = 'none'; // Sembunyikan dulu
+    const oldPuzzleArea = document.getElementById('image-puzzle-area');
+    if (oldPuzzleArea) oldPuzzleArea.remove();
+    // Kosongkan area opsi SEBELUM rendering spesifik tipe
+    optionsAreaEl.innerHTML = '';
 
     if (index >= currentQuizQuestions.length) {
         questionTextEl.textContent = "Latihan Selesai!";
@@ -439,138 +478,181 @@ function displayQuestion(index) {
 
     const currentQuestion = currentQuizQuestions[index];
     console.log("DISPLAY question data:", currentQuestion); // Log data soal
-     // --- BANGUN TAMPILAN DERET JIKA ADA ---
-     if (currentQuestion.sequence) {
-        sequenceDisplayEl.style.display = 'flex'; // Tampilkan kontainer deret
-
-        let sequenceHTML = '';
-
-        // Bagian 1 (Angka Awal)
-        if (currentQuestion.sequence.part1) {
-            sequenceHTML += `<span class="sequence-part">${currentQuestion.sequence.part1}</span>`;
-            sequenceHTML += `<span class="sequence-separator">|</span>`;
-        }
-
-        // Bagian 2 (Huruf dan Angka Asosiasi)
-        if (currentQuestion.sequence.letters && currentQuestion.sequence.numbers) {
-            sequenceHTML += `<span class="sequence-part letter-group">`;
-            currentQuestion.sequence.letters.forEach((letter, i) => {
-                sequenceHTML += `
-                    <span class="letter-number-pair">
-                        <span class="letter">${letter}</span>
-                        <span class="number">${currentQuestion.sequence.numbers[i]}</span>
-                    </span>`;
-            });
-            sequenceHTML += `</span>`; // Tutup letter-group
-        }
-
-        // Bagian 3 (Angka Akhir)
-        if (currentQuestion.sequence.part3) {
-            sequenceHTML += `<span class="sequence-separator">|</span>`;
-            sequenceHTML += `<span class="sequence-part">${currentQuestion.sequence.part3}</span>`;
-        }
-
-        sequenceDisplayEl.innerHTML = sequenceHTML; // Masukkan HTML deret ke div
-    }
-    // --- AKHIR BANGUN TAMPILAN DERET ---
     questionNumberEl.textContent = `Soal ${index + 1} dari ${currentQuizQuestions.length}`;
     questionTextEl.textContent = currentQuestion.question;
 
-     // --- MODIFIKASI TEKS TOMBOL NEXT ---
-     if (index === currentQuizQuestions.length - 1) {
-        // Jika ini adalah soal terakhir
-        nextButtonEl.textContent = "Selesai";
-    } else {
-        // Jika bukan soal terakhir
-        nextButtonEl.textContent = "Soal Berikutnya";
-    }
-    // --- AKHIR MODIFIKASI TEKS TOMBOL NEXT ---
+    // --- RENDER SOAL & OPSI BERDASARKAN TIPE ---
+    if (currentQuestion.type === 'image_logic') {
+        const newImagePuzzleArea = document.createElement('div');
+        newImagePuzzleArea.id = 'image-puzzle-area';
+        const questionAreaEl = document.getElementById('question-area');
+        questionAreaEl.appendChild(newImagePuzzleArea); // Tambahkan area puzzle
 
-    // Kosongkan pilihan sebelumnya dan buat pilihan baru
-    optionsAreaEl.innerHTML = '';
-    if (currentQuestion.sequence) { // Cek apakah ini soal tipe sequence
-        // --- ACAK OPSI ---
+        // 1. Tampilkan Gambar Fakta
+        const examplesContainer = document.createElement('div');
+        examplesContainer.classList.add('image-examples-container');
+        newImagePuzzleArea.appendChild(examplesContainer);
+        currentQuestion.fact_images.forEach(fact => {
+            // ... (kode render fakta - sudah benar) ...
+             const factContainer = document.createElement('div');
+            factContainer.classList.add('fact-image-container');
+            const imgElement = document.createElement('img');
+            imgElement.src = fact.image;
+            imgElement.alt = `Fakta Pola ${fact.label}`;
+            imgElement.classList.add('fact-image');
+            factContainer.appendChild(imgElement);
+            if (fact.label) {
+                const labelSpan = document.createElement('span');
+                labelSpan.classList.add('fact-image-label');
+                labelSpan.textContent = fact.label;
+                factContainer.appendChild(labelSpan);
+            }
+            examplesContainer.appendChild(factContainer);
+        });
+
+        // 2. Tampilkan Gambar Soal Utama
+        const puzzleContainer = document.createElement('div');
+        puzzleContainer.classList.add('main-question-image-container');
+        newImagePuzzleArea.appendChild(puzzleContainer);
+        const mainImgElement = document.createElement('img');
+        mainImgElement.src = currentQuestion.main_question_image;
+        mainImgElement.alt = "Soal Utama";
+        mainImgElement.classList.add('main-question-image');
+        puzzleContainer.appendChild(mainImgElement);
+
+        // 3. Tampilkan Pilihan Jawaban Gambar
+        // optionsAreaEl.innerHTML = ''; // Sudah dikosongkan di awal
+        optionsAreaEl.classList.add('image-options-grid'); // Set styling
         const shuffledOptions = shuffleArray(currentQuestion.options);
-        // --- AKHIR ACAK OPSI ---
-       // --- TAMPILKAN OPSI BERLABEL (DARI HASIL ACAK) ---
-       shuffledOptions.forEach((optionValue, optionIndex) => { // Loop pada hasil acak
-        const optionContainer = document.createElement('div');
-        optionContainer.classList.add('option-container', 'labeled-option');
-        // TAMBAHKAN DATA ATTRIBUTE UNTUK NILAI ASLI
-        optionContainer.dataset.optionValue = optionValue;
+        shuffledOptions.forEach(option => {
+            const optionContainer = document.createElement('div');
+            optionContainer.classList.add('image-option-container');
+            optionContainer.dataset.optionId = option.id;
+            optionContainer.innerHTML = `
+                <span class="image-option-label">Opsi ${option.id}</span>
+                <div class="image-box option-image-box">
+                    <img src="${option.image}" alt="Opsi ${option.id}">
+                </div>
+            `;
+            optionContainer.onclick = () => selectAnswer(optionContainer, option.id, currentQuestion.correctAnswer, currentQuestion.explanation);
+            optionsAreaEl.appendChild(optionContainer);
+        });
 
-        const labelSpan = document.createElement('span');
-        labelSpan.classList.add('option-label');
-        labelSpan.textContent = `Option ${String.fromCharCode(65 + optionIndex)}`; // Label A, B, C sesuai urutan tampil
+    } else if (currentQuestion.sequence) {
+        // Tampilkan visual deret
+        sequenceDisplayEl.style.display = 'flex';
+        let sequenceHTML = '';
+        // ... (kode render sequence display - sudah benar) ...
+         if (currentQuestion.sequence.part1) { sequenceHTML += `<span class="sequence-part">${currentQuestion.sequence.part1}</span><span class="sequence-separator">|</span>`; }
+         if (currentQuestion.sequence.letters && currentQuestion.sequence.numbers) { sequenceHTML += `<span class="sequence-part letter-group">`; currentQuestion.sequence.letters.forEach((letter, i) => { sequenceHTML += `<span class="letter-number-pair"><span class="letter">${letter}</span><span class="number">${currentQuestion.sequence.numbers[i]}</span></span>`; }); sequenceHTML += `</span>`; }
+         if (currentQuestion.sequence.part3) { sequenceHTML += `<span class="sequence-separator">|</span><span class="sequence-part">${currentQuestion.sequence.part3}</span>`; }
+        sequenceDisplayEl.innerHTML = sequenceHTML;
 
-        const checkboxVisualSpan = document.createElement('span');
-        checkboxVisualSpan.classList.add('option-checkbox-visual');
+        // Tampilkan opsi berlabel untuk sequence
+        // optionsAreaEl.innerHTML = ''; // Sudah dikosongkan di awal
+        optionsAreaEl.classList.remove('image-options-grid'); // Hapus styling grid
+        const shuffledSeqOptions = shuffleArray(currentQuestion.options);
+        shuffledSeqOptions.forEach((optionValue, optionIndex) => {
+            const optionContainer = document.createElement('div');
+            optionContainer.classList.add('option-container', 'labeled-option');
+            optionContainer.dataset.optionValue = optionValue;
+             // ... (kode render opsi berlabel - sudah benar) ...
+            const labelSpan = document.createElement('span'); labelSpan.classList.add('option-label'); labelSpan.textContent = `Option ${String.fromCharCode(65 + optionIndex)}`;
+            const checkboxVisualSpan = document.createElement('span'); checkboxVisualSpan.classList.add('option-checkbox-visual');
+            const valueSpan = document.createElement('span'); valueSpan.classList.add('option-value'); valueSpan.textContent = optionValue;
+            optionContainer.appendChild(labelSpan); optionContainer.appendChild(checkboxVisualSpan); optionContainer.appendChild(valueSpan);
+            optionContainer.onclick = () => selectAnswer(optionContainer, optionValue, currentQuestion.correctAnswer, currentQuestion.explanation);
+            optionsAreaEl.appendChild(optionContainer);
+        });
 
-        const valueSpan = document.createElement('span');
-        valueSpan.classList.add('option-value');
-        valueSpan.textContent = optionValue; // Tampilkan nilai opsi yang diacak
-
-        optionContainer.appendChild(labelSpan);
-        optionContainer.appendChild(checkboxVisualSpan);
-        optionContainer.appendChild(valueSpan);
-
-        // Event click tetap menggunakan optionValue yang diacak
-        optionContainer.onclick = () => selectAnswer(optionContainer, optionValue, currentQuestion.correctAnswer, currentQuestion.explanation);
-
-        optionsAreaEl.appendChild(optionContainer);
-    });
-    // --- AKHIR OPSI BERLABEL ---
-
-    } else {
-    currentQuestion.options.forEach(option => {
-        const button = document.createElement('button');
-        button.textContent = option;
-        button.classList.add('option-button');
-        button.onclick = () => selectAnswer(button, option, currentQuestion.correctAnswer, currentQuestion.explanation);
-        optionsAreaEl.appendChild(button);
-    });
+    } else { // Untuk soal teks biasa
+        // optionsAreaEl.innerHTML = ''; // Sudah dikosongkan di awal
+        optionsAreaEl.classList.remove('image-options-grid'); // Hapus styling grid
+        const shuffledTextOptions = shuffleArray(currentQuestion.options);
+        shuffledTextOptions.forEach(textOption => {
+            const button = document.createElement('button');
+            button.textContent = textOption; // Benar untuk teks
+            button.classList.add('option-button');
+            button.onclick = () => selectAnswer(button, textOption, currentQuestion.correctAnswer, currentQuestion.explanation);
+            optionsAreaEl.appendChild(button);
+        });
     }
-
+    
     // Update total soal di score area
     totalQuestionsEl.textContent = currentQuizQuestions.length;
 
-     // Mulai timer untuk soal baru
-     startTimer();
+    // Modifikasi teks tombol next (Ini boleh tetap di sini)
+    nextButtonEl.textContent = (index === currentQuizQuestions.length - 1) ? "Selesai" : "Soal Berikutnya";
+
+     // Mulai timer untuk soal baru (Ini boleh tetap di sini)
+    const timeLimit = currentQuestion.timeLimit || TIME_PER_QUESTION; // Ambil time limit jika ada
+    startTimer(timeLimit); // Gunakan timeLimit saat memulai timer
 }
 
 // Fungsi yang dijalankan saat pilihan jawaban diklik
-function selectAnswer(buttonElement, selectedAnswer, correctAnswer, explanation) {
+function selectAnswer(clickedElement, selectedValue, correctAnswer, explanation) {
     if (answerSelected) return; // Jika sudah memilih, jangan proses lagi
+
+    clearInterval(timerInterval);
 
     answerSelected = true; // Tandai sudah memilih
     nextButtonEl.disabled = false; // Aktifkan tombol next
 
+    const currentQuestion = currentQuizQuestions[index]; // Ambil soal saat ini
+
     // Nonaktifkan semua tombol pilihan setelah memilih
-    const allOptions = optionsAreaEl.querySelectorAll('.option-button');
-    allOptions.forEach(btn => btn.disabled = true);
+    const allOptions = optionsAreaEl.querySelectorAll('.option-button, .option-container, .image-option-container');
+    allOptions.forEach(optEl => {
+        optEl.classList.add('disabled'); // Gunakan class 'disabled' untuk visual
+        if (optEl.tagName === 'BUTTON') {
+            optEl.disabled = true;
+        }
+    });
 
 
     // Tampilkan hasil dan penjelasan
     resultAreaEl.style.display = 'block';
     explanationEl.textContent = `Penjelasan: ${explanation}`;
 
-    if (selectedAnswer === correctAnswer) {
+    if (sselectedValue === correctAnswer) {
         score++;
         scoreEl.textContent = score; // Update skor
         feedbackEl.textContent = "Jawaban Benar!";
-        buttonElement.classList.add('correct');
+        clickedElement.classList.add('correct');
         resultAreaEl.className = 'result-area correct'; // Tambah class untuk styling
     } else {
-        feedbackEl.textContent = `Jawaban Salah. Yang benar adalah: ${correctAnswer}`;
-        buttonElement.classList.add('incorrect');
-         resultAreaEl.className = 'result-area incorrect'; // Tambah class untuk styling
+        // Tampilkan feedback yang sesuai untuk tipe gambar
+        if (currentQuestion.type === 'image_logic') {
+            feedbackEl.textContent = `Jawaban Salah. Yang benar adalah: Opsi ${correctAnswer}`;
+        } else {
+            feedbackEl.textContent = `Jawaban Salah. Yang benar adalah: ${correctAnswer}`;
+        }
+        clickedElement.classList.add('incorrect');
+        resultAreaEl.className = 'result-area incorrect';
 
-         // Tandai jawaban yang benar
-         allOptions.forEach(btn => {
-            if(btn.textContent === correctAnswer) {
-                btn.classList.add('correct');
-            }
-         });
+        // Tandai jawaban yang benar
+        let correctOptionElement = null;
+        if (currentQuestion.type === 'image_logic') {
+             // Cari elemen kontainer gambar yang benar berdasarkan data-option-id
+            correctOptionElement = optionsAreaEl.querySelector(`.image-option-container[data-option-id="${correctAnswer}"]`);
+        } else if (currentQuestion.sequence) {
+            // Cari elemen kontainer sequence yang benar berdasarkan data-option-value
+             correctOptionElement = optionsAreaEl.querySelector(`.option-container[data-option-value="${correctAnswer}"]`);
+        } else {
+            // Cari tombol dengan teks yang cocok
+            const buttons = optionsAreaEl.querySelectorAll('.option-button');
+            buttons.forEach(btn => {
+                if (btn.textContent === correctAnswer) {
+                    correctOptionElement = btn;
+                }
+            });
+        }
+
+        if (correctOptionElement) {
+            correctOptionElement.classList.add('correct');
+            // Pastikan tetap terlihat jelas meskipun dinonaktifkan
+             correctOptionElement.style.opacity = '1'; // Override opacity jika perlu
+        }
     }
 }
 
@@ -664,8 +746,8 @@ function countdown() {
 }
 
 // Fungsi untuk memulai timer
-function startTimer() {
-    timeLeft = TIME_PER_QUESTION;
+function startTimer(duration = TIME_PER_QUESTION) {
+    timeLeft = duration;
     updateTimerDisplay(); // Tampilkan waktu awal
     // Hapus interval lama jika ada (pencegahan)
     clearInterval(timerInterval);

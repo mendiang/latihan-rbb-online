@@ -573,3 +573,183 @@ h1 {
         justify-content: center;
     }
 }
+
+/* --- Tambahkan atau Modifikasi di style.css --- */
+
+/* Kontainer untuk semua contoh/fakta (Tetap Sama) */
+.image-examples-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+/* Styling untuk kontainer SATU gambar fakta utuh (Tetap Sama) */
+.fact-image-container {
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    border: 1px solid #eee;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Styling untuk gambar fakta utuh di dalamnya (Tetap Sama) */
+.fact-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Styling untuk label nomor fakta (Tetap Sama) */
+.fact-image-label {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background-color: rgba(233, 236, 239, 0.8);
+    color: #495057;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    line-height: 1;
+}
+
+/* === BARU: Styling untuk Soal Utama (Gambar Tunggal) === */
+.main-question-image-container {
+    display: block; /* Atau flex jika ingin centering lebih mudah */
+    /* justify-content: center; */ /* Jika display: flex */
+    width: 80%; /* Sesuaikan lebar */
+    max-width: 400px; /* Sesuaikan max-width */
+    margin: 0 auto 25px auto; /* Pusatkan dan beri margin bawah */
+    border: 1px solid #ccc; /* Border opsional */
+    padding: 5px;
+    background-color: #f0f0f0; /* Warna background berbeda? */
+    border-radius: 4px;
+}
+
+.main-question-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/* === AKHIR Styling Soal Utama Baru === */
+
+
+/* === HAPUS atau KOMENTARI Gaya Lama yang Tidak Terpakai ===
+.image-puzzle-main {
+     ... dihapus ...
+}
+.image-box.question-box {
+     ... dihapus ...
+}
+.image-arrow {
+     ... dihapus jika hanya dipakai di soal utama dan fakta lama ...
+}
+.arrow-label {
+    ... dihapus jika hanya dipakai di panah soal utama lama ...
+}
+========================================================== */
+
+
+/* Gaya untuk Opsi Jawaban (TETAP DIPERLUKAN dan Tidak Berubah) */
+#options-area.image-options-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   gap: 15px;
+}
+.image-option-container {
+   border: 2px solid #dee2e6;
+   border-radius: 8px;
+   padding: 10px;
+   background-color: #fff;
+   cursor: pointer;
+   transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+   text-align: center;
+}
+.image-option-container:hover:not(.disabled) { /* Hover effect */
+    border-color: #adb5bd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.image-option-label { /* Label Opsi A, B, C */
+    display: block;
+    font-size: 0.85em;
+    color: #6c757d;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.image-box.option-image-box { /* Kotak di dalam Opsi */
+    background-color: #f8f9fa;
+    border: 1px solid #eee;
+    min-height: 70px; /* Sesuaikan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.option-image-box img { /* Gambar di dalam Opsi */
+     max-height: 60px; /* Sesuaikan */
+     object-fit: contain;
+     display: block;
+     max-width: 100%;
+}
+/* ... Gaya .correct, .incorrect, .disabled untuk .image-option-container tetap sama ... */
+
+
+/* Penyesuaian Responsif */
+@media (max-width: 700px) {
+    .fact-image-container,
+    .main-question-image-container { /* Targetkan kedua kontainer */
+        width: 95%;
+        max-width: none;
+    }
+    #options-area.image-options-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+     /* ... Sesuaikan ukuran font/padding opsi jika perlu ... */
+}
+
+/* --- Styling Status Jawaban untuk Opsi Gambar --- */
+
+/* Jawaban benar (baik yang dipilih maupun yang ditunjukkan) */
+.image-option-container.correct {
+    border-color: #198754; /* Hijau border lebih tebal */
+    background-color: #d1e7dd; /* Background hijau pastel */
+    box-shadow: 0 0 8px rgba(25, 135, 84, 0.3); /* Optional: shadow hijau halus */
+}
+/* Styling tambahan untuk label di dalam kontainer benar */
+.image-option-container.correct .image-option-label {
+    color: #0f5132; /* Warna teks label hijau tua */
+    font-weight: bold;
+}
+/* Optional: Styling untuk kotak gambar di dalamnya jika benar */
+.image-option-container.correct .option-image-box {
+   /* Mungkin tidak perlu styling khusus, background kontainer sudah cukup */
+   /* border-color: #198754; */ /* Jika ingin border kotak dalamnya juga hijau */
+}
+
+
+/* Jawaban salah yang dipilih */
+.image-option-container.incorrect {
+    border-color: #dc3545; /* Merah */
+    background-color: #f8d7da;
+}
+.image-option-container.incorrect .image-option-label {
+    color: #842029; /* Merah tua */
+}
+
+/* Opsi dinonaktifkan setelah memilih */
+.image-option-container.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Pastikan jawaban benar tetap jelas walau salah pilih & disabled */
+.image-option-container.correct.disabled {
+     opacity: 1 !important; /* Paksa opacity kembali */
+}
