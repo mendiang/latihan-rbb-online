@@ -783,6 +783,100 @@ const questions = [
         explanation: "Fakta nomor 3 hanya menyebutkan bahwa sekolah menyediakan guru pendamping khusus, namun tidak dijelaskan secara eksplisit apakah semua siswa berkebutuhan khusus mendapat pendampingan. Karena itu, simpulan tersebut tidak dapat dipastikan kebenarannya.",
         // timeLimit: 90 // Opsional: Beri waktu lebih lama jika perlu
     },
+    {
+        type: 'reading_comprehension',
+        category: 'TKD',
+        passage_title: "PENGELOLAAN SAMPAH DI KOTA MANDIRI",
+        passage_intro: "Kota Mandiri merupakan salah satu kota yang berhasil menerapkan sistem pengelolaan sampah berbasis masyarakat. Pemerintah kota bekerja sama dengan berbagai komunitas lokal untuk meningkatkan kesadaran warga tentang pentingnya pengelolaan sampah yang berkelanjutan.\nBeberapa fakta tentang Kota Mandiri:",
+        passage_facts: [
+            "1. Program pemilahan sampah dari rumah tangga sudah berjalan selama tiga tahun.",
+            "2. Terdapat lebih dari 150 bank sampah aktif yang tersebar di seluruh kecamatan.",
+            "3. Pemerintah kota memberikan insentif bagi warga yang aktif dalam kegiatan daur ulang.",
+            "4. Volume sampah yang masuk ke tempat pembuangan akhir berkurang hingga 40% dalam dua tahun terakhir.",
+            "5. Kota Mandiri meraih penghargaan nasional atas inovasi pengelolaan sampah berbasis komunitas."
+        ],
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:",
+        conclusion: "Pengelolaan sampah di Kota Mandiri hanya dilakukan oleh pemerintah kota tanpa peran serta masyarakat.",
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Simpulan adalah salah",
+        explanation: "Fakta menunjukkan bahwa pengelolaan sampah dilakukan bersama antara pemerintah kota dan masyarakat, seperti melalui bank sampah dan insentif daur ulang. Maka, simpulan bahwa hanya pemerintah yang berperan adalah keliru."
+    },
+    {
+        type: 'reading_comprehension',
+        category: 'TKD',
+        passage_title: "GERAKAN NASIONAL BANGGA BUATAN INDONESIA",
+        passage_intro: "Gerakan Nasional Bangga Buatan Indonesia (BBI) diluncurkan oleh pemerintah sebagai upaya untuk meningkatkan kecintaan masyarakat terhadap produk lokal. Gerakan ini melibatkan berbagai kementerian, pelaku usaha, dan masyarakat dalam mendukung UMKM agar mampu bersaing di pasar nasional maupun global.\nBeberapa fakta tentang pelaksanaan program BBI:",
+        passage_facts: [
+            "1. Program ini resmi diluncurkan pada Mei 2020 oleh Presiden Republik Indonesia.",
+            "2. Lebih dari 20 juta UMKM telah tergabung dalam program ini melalui berbagai platform digital.",
+            "3. Pemerintah bekerja sama dengan marketplace untuk meningkatkan visibilitas produk lokal.",
+            "4. Kementerian BUMN turut aktif memfasilitasi pelatihan digitalisasi dan manajemen usaha bagi UMKM.",
+            "5. Salah satu target utama gerakan ini adalah meningkatkan penggunaan produk dalam negeri dalam pengadaan barang dan jasa pemerintah serta BUMN."
+        ],
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:",
+        conclusion: "Gerakan Bangga Buatan Indonesia hanya difokuskan pada promosi produk lokal di luar negeri.",
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Simpulan adalah salah",
+        explanation: "Fakta-fakta menyebutkan bahwa gerakan ini fokus pada peningkatan konsumsi produk lokal di dalam negeri, melalui pelibatan UMKM, digitalisasi, dan dukungan BUMN serta pemerintah. Tidak ada indikasi bahwa fokus utamanya adalah promosi di luar negeri.",
+    },
+    {
+        type: 'reading_comprehension',
+        category: 'TKD',
+        passage_title: "PERUSAHAAN TEKNOLOGI STARTUP",
+        passage_intro: "PT Inovasi Digital adalah perusahaan startup yang bergerak di bidang teknologi kecerdasan buatan (AI). Perusahaan ini didirikan oleh tiga orang lulusan perguruan tinggi ternama di Indonesia yang memiliki pengalaman di industri teknologi. Dalam lima tahun terakhir, perusahaan ini telah berkembang pesat dan mendapatkan investasi dari berbagai pihak.\nBeberapa fakta tentang PT Inovasi Digital:",
+        passage_facts: [
+            "1. Perusahaan memiliki lebih dari 200 karyawan yang sebagian besar merupakan insinyur perangkat lunak.",
+            "2. Salah satu produknya adalah chatbot berbasis AI yang digunakan oleh banyak perusahaan e-commerce.",
+            "3. PT Inovasi Digital mendapatkan pendanaan Seri B senilai 15 juta dolar dari investor asing.",
+            "4. Perusahaan telah meraih penghargaan sebagai “Startup Terbaik” dalam ajang nasional selama dua tahun berturut-turut.",
+            "5. Meskipun berkembang pesat, perusahaan tetap menghadapi tantangan dalam pengembangan teknologi karena keterbatasan tenaga ahli AI di Indonesia."
+        ],
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:",
+        conclusion: "PT Inovasi Digital telah mendapatkan penghargaan nasional sebagai startup terbaik selama dua tahun terakhir.",
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Simpulan adalah benar",
+        explanation: "Fakta nomor 4 secara eksplisit menyebutkan bahwa perusahaan telah meraih penghargaan sebagai 'Startup Terbaik' dalam ajang nasional selama dua tahun berturut-turut, sehingga simpulan tersebut didukung oleh data yang tersedia."
+    },
+    {
+        type: 'reading_comprehension',
+        category: 'TWK',
+        passage_title: "PERUSAHAAN TEKNOLOGI STARTUP",
+        passage_intro: "PT Inovasi Digital adalah perusahaan startup yang bergerak di bidang teknologi kecerdasan buatan (AI). Perusahaan ini didirikan oleh tiga orang lulusan perguruan tinggi ternama di Indonesia yang memiliki pengalaman di industri teknologi. Dalam lima tahun terakhir, perusahaan ini telah berkembang pesat dan mendapatkan investasi dari berbagai pihak.\nBeberapa fakta tentang PT Inovasi Digital:",
+        passage_facts: [
+            "1. Perusahaan memiliki lebih dari 200 karyawan yang sebagian besar merupakan insinyur perangkat lunak.",
+            "2. Salah satu produknya adalah chatbot berbasis AI yang digunakan oleh banyak perusahaan e-commerce.",
+            "3. PT Inovasi Digital mendapatkan pendanaan Seri B senilai 15 juta dolar dari investor asing.",
+            "4. Perusahaan telah meraih penghargaan sebagai “Startup Terbaik” dalam ajang nasional selama dua tahun berturut-turut.",
+            "5. Meskipun berkembang pesat, perusahaan tetap menghadapi tantangan dalam pengembangan teknologi karena keterbatasan tenaga ahli AI di Indonesia."
+        ],
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:",
+        conclusion: "PT Inovasi Digital tidak mengalami kendala apa pun dalam pengembangan teknologinya.",
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Simpulan adalah salah",
+        explanation: "Fakta nomor 5 menyebutkan bahwa perusahaan menghadapi tantangan dalam pengembangan teknologi karena keterbatasan tenaga ahli AI di Indonesia. Maka simpulan bahwa perusahaan tidak mengalami kendala adalah salah."
+    },
+    {
+        type: 'reading_comprehension',
+        category: 'TWK',
+        passage_title: "BISNIS KEDAI KOPI REZA",
+        passage_intro: "Reza adalah seorang pengusaha muda yang mendirikan kedai kopi kecil di dekat kampus universitas. Kedainya menawarkan berbagai jenis kopi dengan harga yang terjangkau bagi mahasiswa. Berkat strategi pemasaran yang efektif dan kualitas kopi yang baik, bisnisnya berkembang pesat dalam satu tahun terakhir.\nBeberapa fakta tentang kedai kopi Reza:",
+        passage_facts: [
+            "1. Kedai buka dari pukul 08.00 hingga 22.00 setiap hari.",
+            "2. Rata-rata kedai menjual 120 gelas kopi per hari dengan harga rata-rata Rp15.000 per gelas.",
+            "3. Biaya operasional harian kedai (sewa tempat, gaji pegawai, dan bahan baku) mencapai Rp1.200.000.",
+            "4. Pada bulan tertentu, kedai memberikan diskon khusus sebesar 10% untuk mahasiswa.",
+            "5. Keuntungan bersih dihitung dari total pendapatan dikurangi biaya operasional."
+        ],
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:",
+        conclusion: "Kedai kopi Reza lebih banyak dikunjungi mahasiswa dibandingkan pelanggan umum.",
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Tidak dapat disimpulkan",
+        explanation: "Meskipun kedai berada di dekat kampus dan menawarkan diskon untuk mahasiswa, tidak ada data kuantitatif atau perbandingan yang menyatakan bahwa mahasiswa lebih banyak dibandingkan pelanggan umum."
+    }
+    
+    
+    
+    
 
     // ... soal-soal lain ...
 
