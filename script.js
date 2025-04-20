@@ -839,7 +839,7 @@ const questions = [
     },
     {
         type: 'reading_comprehension',
-        category: 'TWK',
+        category: 'TKD',
         passage_title: "PERUSAHAAN TEKNOLOGI STARTUP",
         passage_intro: "PT Inovasi Digital adalah perusahaan startup yang bergerak di bidang teknologi kecerdasan buatan (AI). Perusahaan ini didirikan oleh tiga orang lulusan perguruan tinggi ternama di Indonesia yang memiliki pengalaman di industri teknologi. Dalam lima tahun terakhir, perusahaan ini telah berkembang pesat dan mendapatkan investasi dari berbagai pihak.\nBeberapa fakta tentang PT Inovasi Digital:",
         passage_facts: [
@@ -857,7 +857,7 @@ const questions = [
     },
     {
         type: 'reading_comprehension',
-        category: 'TWK',
+        category: 'TKD',
         passage_title: "BISNIS KEDAI KOPI REZA",
         passage_intro: "Reza adalah seorang pengusaha muda yang mendirikan kedai kopi kecil di dekat kampus universitas. Kedainya menawarkan berbagai jenis kopi dengan harga yang terjangkau bagi mahasiswa. Berkat strategi pemasaran yang efektif dan kualitas kopi yang baik, bisnisnya berkembang pesat dalam satu tahun terakhir.\nBeberapa fakta tentang kedai kopi Reza:",
         passage_facts: [
@@ -872,12 +872,166 @@ const questions = [
         options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
         correctAnswer: "Tidak dapat disimpulkan",
         explanation: "Meskipun kedai berada di dekat kampus dan menawarkan diskon untuk mahasiswa, tidak ada data kuantitatif atau perbandingan yang menyatakan bahwa mahasiswa lebih banyak dibandingkan pelanggan umum."
-    }
-    
-    
-    
-    
+    },
+    {
+        type: 'reading_comprehension',
+        category: 'TKD',
+        passage_title: "PIETER BOTH - GUBERNUR JENDERAL PERTAMA HINDIA BELANDA",
+        passage_intro: "Pieter Both adalah Gubernur Jenderal pertama dari Hindia Belanda yang menjabat pada tahun 1609 hingga 1614. Ia merupakan tokoh penting dalam sejarah awal kolonialisme Belanda di wilayah Nusantara. Pieter Both berperan besar dalam mendirikan dan memperkuat kedudukan Vereenigde Oostindische Compagnie (VOC) di Indonesia.\nBeberapa fakta tentang Pieter Both:",
+        passage_facts: [
+            "1. Pieter Both diangkat sebagai Gubernur Jenderal pertama VOC di Hindia Belanda pada tahun 1609.",
+            "2. Ia berhasil menaklukkan beberapa wilayah penting seperti Ambon dan Banda.",
+            "3. Pemerintahannya berfokus pada penguasaan perdagangan rempah-rempah.",
+            "4. Pieter Both meninggal dalam pelayaran pulang ke Belanda pada tahun 1615 akibat kapalnya karam di Laut Jawa.",
+            "5. Ia dikenal sebagai tokoh awal yang meletakkan dasar kekuasaan kolonial Belanda di Indonesia."
+        ],
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:",
+        conclusion: "Pieter Both merupakan tokoh awal yang memperkuat kekuasaan kolonial Belanda di Indonesia.",
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Simpulan adalah benar",
+        explanation: "Fakta nomor 5 secara eksplisit menyatakan bahwa Pieter Both meletakkan dasar kekuasaan kolonial Belanda di Indonesia. Hal ini menunjukkan simpulan tersebut benar."
+    },
+    {
+        type: 'reading_comprehension',
+        category: 'TKD',
+        passage_title: "JAN PIETERSZOON COEN - ARSITEK KOLONIALISME BELANDA",
+        passage_intro: "Jan Pieterszoon Coen adalah salah satu tokoh penting dalam sejarah penjajahan Belanda di Indonesia. Ia dikenal sebagai pendiri Batavia dan tokoh yang memperkuat dominasi VOC di wilayah kepulauan Indonesia pada awal abad ke-17. Coen menjabat sebagai Gubernur Jenderal VOC sebanyak dua kali, dan terkenal karena kebijakan militernya yang keras.\nBeberapa fakta tentang Jan Pieterszoon Coen:",
+        passage_facts: [
+            "1. Jan Pieterszoon Coen pertama kali diangkat sebagai Gubernur Jenderal VOC pada tahun 1619.",
+            "2. Ia memimpin penaklukan Jayakarta dan mengganti namanya menjadi Batavia, yang menjadi pusat kekuasaan VOC.",
+            "3. Coen dikenal dengan kebijakan tangan besi dalam menaklukkan daerah-daerah penghasil rempah seperti Banda.",
+            "4. Ia kembali menjabat sebagai Gubernur Jenderal pada tahun 1627 hingga wafatnya pada tahun 1629.",
+            "5. Banyak kebijakannya yang menuai kontroversi karena dianggap terlalu kejam oleh sebagian pihak."
+        ],
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:",
+        conclusion: "Jan Pieterszoon Coen berperan besar dalam memperkuat dominasi VOC di Indonesia melalui pendekatan militer.",
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Simpulan adalah benar",
+        explanation: "Fakta nomor 2 dan 3 menjelaskan tindakan Coen dalam menaklukkan Jayakarta dan Banda dengan kekuatan militer, serta penggantian nama menjadi Batavia. Ini menunjukkan peran pentingnya dalam memperkuat VOC."
+    },
+    {
+        type: 'reading_comprehension',
+        category: 'TKD',
+        passage_title: "HERMAN WILLEM DAENDELS - GUBERNUR JENDERAL MASA PRANCIS",
+        passage_intro: "Herman Willem Daendels diangkat sebagai Gubernur Jenderal Hindia Belanda oleh Raja Louis Bonaparte dari Belanda pada masa pengaruh Prancis (1808–1811). Ia dikenal sebagai tokoh yang membawa reformasi administrasi dan infrastruktur di wilayah kolonial, terutama dengan pembangunan jalan raya dari Anyer hingga Panarukan.\nBeberapa fakta tentang Daendels:",
+        passage_facts: [
+            "1. Daendels menjabat sebagai Gubernur Jenderal Hindia Belanda dari tahun 1808 hingga 1811.",
+            "2. Ia membangun Jalan Raya Pos (Grote Postweg) sepanjang lebih dari 1.000 km dari Anyer hingga Panarukan.",
+            "3. Daendels memperkuat pertahanan militer di wilayah Jawa karena ancaman Inggris.",
+            "4. Ia melakukan reformasi sistem birokrasi dan peradilan di bawah pengaruh sistem pemerintahan Prancis.",
+            "5. Masa pemerintahannya ditandai dengan kerja paksa yang menimbulkan penderitaan bagi rakyat."
+        ],
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:",
+        conclusion: "Daendels memberikan kontribusi besar terhadap infrastruktur kolonial di Indonesia.",
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Simpulan adalah benar",
+        explanation: "Fakta nomor 2 secara jelas menyebutkan pembangunan Jalan Raya Pos oleh Daendels, yang merupakan proyek infrastruktur besar pada masa kolonial. Ini mendukung simpulan bahwa kontribusinya pada infrastruktur cukup signifikan."
+    },
+    {
+        type: 'reading_comprehension',
+        category: 'TKD',
+        passage_title: "JOHANNES VAN DEN BOSCH - PENGGAGAS TANAM PAKSA",
+        passage_intro: "Johannes van den Bosch adalah Gubernur Jenderal Hindia Belanda yang dikenal sebagai pencetus sistem tanam paksa atau Cultuurstelsel. Kebijakan ini diterapkan pada tahun 1830 sebagai cara untuk meningkatkan pendapatan pemerintah kolonial Belanda dari wilayah jajahannya di Indonesia. Meskipun menghasilkan keuntungan besar bagi Belanda, sistem ini menuai kritik karena menimbulkan penderitaan bagi rakyat pribumi.\nBeberapa fakta tentang Van den Bosch:",
+        passage_facts: [
+            "1. Van den Bosch menjabat sebagai Gubernur Jenderal Hindia Belanda mulai tahun 1830.",
+            "2. Ia memperkenalkan sistem tanam paksa, mewajibkan petani menanam tanaman ekspor seperti kopi, gula, dan nila.",
+            "3. Sistem ini menyebabkan kesengsaraan di kalangan petani karena pengambilan hasil panen oleh pemerintah kolonial.",
+            "4. Belanda memperoleh keuntungan besar dari hasil tanam paksa yang dikirim ke Eropa.",
+            "5. Sistem tanam paksa mendapat kritik dari tokoh-tokoh Belanda sendiri, termasuk dalam buku Max Havelaar karya Multatuli."
+        ],
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:",
+        conclusion: "Van den Bosch menciptakan kebijakan yang menguntungkan Belanda namun merugikan rakyat Indonesia.",
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Simpulan adalah benar",
+        explanation: "Fakta nomor 2, 3, dan 4 menunjukkan bahwa kebijakan tanam paksa memberikan keuntungan bagi Belanda tetapi membawa penderitaan bagi rakyat. Maka, simpulan tersebut didukung oleh fakta yang tersedia."
+    },
+    {
+        type: 'reading_comprehension',
+        category: 'TKD',
+        passage_title: "CORNELIS SPEELMAN - TOKOH KOLONIAL BELANDA",
+        passage_intro: "Cornelis Speelman adalah seorang pejabat tinggi VOC yang memainkan peran penting dalam memperkuat kekuasaan Belanda di Indonesia pada abad ke-17. Ia dikenal karena keberhasilannya dalam menaklukkan berbagai wilayah, termasuk kerajaan-kerajaan di Jawa dan Sulawesi. Sebagai seorang pemimpin militer dan politik, Speelman berperan besar dalam perluasan kekuasaan VOC di Nusantara.\nBeberapa fakta tentang Cornelis Speelman:",
+        passage_facts: [
+            "1. Cornelis Speelman bergabung dengan VOC pada usia muda dan cepat meraih posisi penting.",
+            "2. Ia terkenal karena keberhasilannya menaklukkan kerajaan Makassar di Sulawesi pada tahun 1667.",
+            "3. Speelman juga berperan dalam menaklukkan kerajaan Mataram di Jawa pada masa pemerintahannya.",
+            "4. Pada tahun 1674, Speelman diangkat menjadi Gubernur Jenderal VOC setelah berhasil memperluas wilayah jajahan Belanda.",
+            "5. Di bawah kepemimpinannya, VOC berhasil menguasai sejumlah wilayah penting di Indonesia, meskipun dengan cara-cara yang sering kali menggunakan kekerasan."
+        ],
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:",
+        conclusion: "Cornelis Speelman berperan besar dalam memperluas wilayah kekuasaan Belanda di Indonesia melalui strategi militer.",
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Simpulan adalah benar",
+        explanation: "Fakta nomor 3, 4, dan 5 menunjukkan bahwa Speelman menggunakan kekuatan militer untuk menaklukkan kerajaan-kerajaan besar di Indonesia, yang memperkuat kekuasaan VOC di Nusantara."
+    },
+    {
+        type: 'reading_comprehension',
+        category: 'TKD',
+        passage_title: "VAN IMHOOF - TOKOH KOLONIAL BELANDA",
+        passage_intro: "Van Imhoof adalah seorang tokoh penting dalam sejarah kolonialisme Belanda di Indonesia. Ia terkenal karena posisinya dalam administrasi pemerintahan kolonial dan kontribusinya terhadap kebijakan dan struktur pemerintahan yang diterapkan oleh Belanda di Nusantara pada abad ke-19. Sebagai seorang pejabat tinggi, Van Imhoof memiliki peran dalam mengawasi sistem tanam paksa serta mengelola hubungan antara Belanda dan kerajaan-kerajaan di Indonesia.\nBeberapa fakta tentang Van Imhoof:",
+        passage_facts: [
+            "1. Van Imhoof merupakan seorang pejabat tinggi Belanda yang bekerja di Hindia Belanda pada abad ke-19.",
+            "2. Ia berperan penting dalam kebijakan pemerintahan kolonial dan administrasi di daerah-daerah jajahan Belanda.",
+            "3. Van Imhoof mengawasi pelaksanaan sistem tanam paksa yang memberikan keuntungan besar bagi Belanda.",
+            "4. Ia bekerja untuk memperkuat sistem birokrasi kolonial Belanda dan menjaga hubungan antara pemerintah Belanda dan kerajaan-kerajaan lokal.",
+            "5. Van Imhoof dikenal sebagai tokoh yang mendukung kebijakan kolonial untuk meningkatkan pengaruh Belanda di Indonesia."
+        ],
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:",
+        conclusion: "Van Imhoof berperan dalam memperkuat kebijakan kolonial Belanda di Indonesia, termasuk pelaksanaan sistem tanam paksa.",
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Simpulan adalah benar",
+        explanation: "Fakta nomor 3 dan 5 menyatakan bahwa Van Imhoof berperan dalam pelaksanaan sistem tanam paksa dan mendukung kebijakan kolonial untuk memperkuat pengaruh Belanda di Indonesia, yang mendukung simpulan tersebut."
+    },
+    {
+        type: 'reading_comprehension',
+        category: 'TKD',
+        passage_title: "NICHOLAS HARTING - TOKOH KOLONIAL BELANDA",
+        passage_intro: "Nicholas Harting adalah seorang pejabat Belanda yang dikenal karena perannya dalam administrasi kolonial di Indonesia pada abad ke-19. Ia berkontribusi dalam pengelolaan ekonomi kolonial, terutama dalam bidang pertanian dan pengelolaan sumber daya alam. Selain itu, Harting juga berperan dalam hubungan antara Belanda dan kerajaan-kerajaan lokal di Indonesia.\nBeberapa fakta tentang Nicholas Harting:",
+        passage_facts: [
+            "1. Nicholas Harting adalah pejabat Belanda yang bekerja di Hindia Belanda pada abad ke-19.",
+            "2. Ia terlibat dalam kebijakan ekonomi kolonial yang bertujuan untuk memaksimalkan keuntungan bagi Belanda.",
+            "3. Harting bekerja sama dengan pemerintah Belanda dalam mengelola sektor pertanian dan sumber daya alam di Indonesia.",
+            "4. Ia juga berperan dalam menjaga hubungan diplomatik antara Belanda dan kerajaan-kerajaan lokal di Indonesia.",
+            "5. Nicholas Harting dikenal sebagai tokoh yang mendukung kebijakan Belanda untuk memperkuat dominasi ekonomi dan politik di Indonesia."
+        ],
+        question: "Berdasarkan fakta-fakta di atas, evaluasilah simpulan berikut:",
+        conclusion: "Nicholas Harting berperan dalam memperkuat dominasi kolonial Belanda di Indonesia melalui kebijakan ekonomi dan hubungan diplomatik.",
+        options: ["Simpulan adalah benar", "Simpulan adalah salah", "Tidak dapat disimpulkan"],
+        correctAnswer: "Simpulan adalah benar",
+        explanation: "Fakta nomor 2, 3, dan 5 menyatakan bahwa Harting terlibat dalam kebijakan ekonomi yang menguntungkan Belanda dan berperan dalam memperkuat dominasi kolonial melalui hubungan diplomatik, yang mendukung simpulan tersebut."
+    },
+    {
+        type: 'image_logic',
+        question: "Perhatikan pola hubungan gambar berikut. Tentukan gambar yang tepat untuk mengisi tanda tanya.",
+        category: "TKD",
 
+        // BAGIAN 1: Gambar Fakta (Gunakan nama file)
+        fact_images: [
+            // berisi gambar gabungan kiri->kanan untuk fakta 1
+            { image: 'images/fact_row_1_2.png', label: '1' },
+            { image: 'images/fact_row_2_2.png', label: '2' },
+            { image: 'images/fact_row_3_2.png', label: '3' },
+            { image: 'images/fact_row_4_2.png', label: '4' },
+            { image: 'images/fact_row_5_2.png', label: '5' },
+        ],
+
+        // BAGIAN 2: Gambar Soal Utama (Gunakan nama file tanpa _combined)
+        // Pastikan file 'images/main_question.png' berisi gambar gabungan ?->kanan
+        main_question_image: 'images/main_question_2.png',
+
+        // BAGIAN 3: Gambar Pilihan Jawaban (Tetap Sama)
+        options: [
+            { id: 'A', image: 'images/opsi_a_2.png' },
+            { id: 'B', image: 'images/opsi_b_2.png' },
+            { id: 'C', image: 'images/opsi_c_2.png' },
+            { id: 'D', image: 'images/opsi_d_2.png' },
+            { id: 'E', image: 'images/opsi_e_2.png' }
+        ],
+
+        correctAnswer: 'C', // Sesuaikan
+        explanation: "Cukup Jelas",
+        // timeLimit: 60 // Opsional
+    },
+    
     // ... soal-soal lain ...
 
     // Tambahkan soal-soal RBB Anda di sini...
